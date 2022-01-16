@@ -5,29 +5,35 @@ import { Education, Experience } from "../utils/resume";
 const Resume = () => {
   return (
     <div className="resume">
-      <div className="experience">
-        {Education.map(({ date, title, description }, index) => {
-          return (
-            <ExperienceEducationCard
-              jobDate={date}
-              jobTitle={title}
-              jobDescription={description}
-              key={index}
-            />
-          );
-        })}
+      <div className="experience-education">
+        <h2 className="experience-education__title">Experience</h2>
+        <div className="experience-education__items">
+          {Experience.map(({ date, title, description }, index) => {
+            return (
+              <ExperienceEducationCard
+                jobDate={date}
+                jobTitle={title}
+                jobDescription={description}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
-      <div className="education">
-        {Experience.map(({ date, title, description }, index) => {
-          return (
-            <ExperienceEducationCard
-              jobDate={date}
-              jobTitle={title}
-              jobDescription={description}
-              key={index}
-            />
-          );
-        })}
+      <div className="experience-education">
+        <h2 className="experience-education__title">Education</h2>
+        <div className="experience-education__items">
+          {Education.map(({ date, title, description }, index) => {
+            return (
+              <ExperienceEducationCard
+                jobDate={date}
+                jobTitle={title}
+                jobDescription={description}
+                key={index}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

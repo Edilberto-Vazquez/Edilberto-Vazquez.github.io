@@ -2,10 +2,10 @@ import React from "react";
 
 const ExperienceEducationCard = ({ jobDate, jobTitle, jobDescription }) => {
   return (
-    <div className="education-job">
-      <span className="education-job__from-to-date">{jobDate}</span>
-      <h3 className="education-job__title">{jobTitle}</h3>
-      <p className="education-job__description">{jobDescription}</p>
+    <div className="experience-education-card">
+      <span className="experience-education-card__from-to-date">{jobDate}</span>
+      <h3 className="experience-education-card__title">{jobTitle}</h3>
+      <p className="experience-education-card__description">{jobDescription}</p>
     </div>
   );
 };

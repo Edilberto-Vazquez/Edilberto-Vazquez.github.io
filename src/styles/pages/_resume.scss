@@ -1,4 +1,24 @@
 .resume {
   font-size: 42px;
-  @include page-layout-flex(true);
+  @include page-layout-grid(true);
+}
+
+.experience-education {
+  width: 100%;
+  height: auto;
+  margin-block-start: 24px;
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: $gap-container;
+  .experience-education__title {
+    font-size: $size-title-1;
+    color: $soft-secondary-color;
+  }
+  .experience-education__items {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: $gap-container;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 450px));
+  }
 }

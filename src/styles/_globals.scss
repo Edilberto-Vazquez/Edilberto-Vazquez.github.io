@@ -23,9 +23,17 @@ li {
   font-size: $size-text-1;
 }
 
-@mixin page-layout-grid {
+@mixin page-layout-grid($padding) {
+  @if $padding == true {
+    padding-block-start: 86px;
+  }
   width: 100%;
+  height: auto;
   display: grid;
+  padding-inline: 16px;
+  @media (min-width: 900px) {
+    padding-inline: 15%;
+  }
 }
 
 /* layout for the main container for each section */

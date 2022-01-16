@@ -1,0 +1,14 @@
+.experience-education-card {
+  max-width: 450px;
+  min-width: 272px;
+  .experience-education-card__from-to-date {
+    border-radius: 3px;
+    background-color: $strong-color-primary;
+  }
+  .experience-education-card__title {
+    font-size: $size-title-1;
+  }
+  .experience-education-card__description {
+    font-size: $size-text-2;
+  }
+}
