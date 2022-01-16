@@ -29,7 +29,7 @@ const WhatIDoList = [
     icon: "languages",
     title: "Programming Languages",
     description:
-      "the main languajes that I use are JavaScript Golang and Python, and I have basic knowledge in Java, TypeScrip and soon I will be learning Rust and SQL for DataBases",
+      "the main languajes that I use are JavaScript Golang and Python, and I have basic knowledge in Java, TypeScrip and soon I will be learning Rust",
   },
   {
     icon: "technology",
