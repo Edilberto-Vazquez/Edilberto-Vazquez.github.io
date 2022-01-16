@@ -9,7 +9,7 @@ const AboutMe = () => {
       <UserProfileCard technologies={languagesAndTechnologies} />
       <div className="what-i-do">
         <h3 className="what-i-do__title">What I Do</h3>
-        <div className="description-cards">
+        <div className="what-i-do__cards">
           {WhatIDoList.map((item, key) => (
             <DescriptionCard
               key={key}
