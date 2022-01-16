@@ -1,9 +1,8 @@
 .user-profile-card {
   width: 100%;
-  height: min-content;
-  padding: $padding-container;
+  height: auto;
   display: grid;
-  grid-auto-rows: min-content;
+  grid-template-rows: max-content;
   place-items: center;
   gap: $gap-container;
 }
@@ -16,7 +15,7 @@
 }
 
 .information-card {
-  max-width: 450px;
+  width: 100%;
   display: grid;
   place-items: center;
   gap: $gap-container;

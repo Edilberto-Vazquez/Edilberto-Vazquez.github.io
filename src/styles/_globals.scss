@@ -25,7 +25,7 @@ li {
 
 @mixin page-layout-grid($padding) {
   @if $padding == true {
-    padding-block-start: 86px;
+    padding-block-start: 100px;
   }
   width: 100%;
   height: auto;
