@@ -1,0 +1,23 @@
+.about-me {
+  @include page-layout-flex(true);
+}
+
+.what-i-do {
+  @include page-layout-flex(false);
+  padding: $padding-container;
+}
+
+.what-i-do__title {
+  width: 150px;
+  font-size: $size-title-1;
+  border-block-end: 2px solid $strong-color-primary;
+}
+
+.description-cards {
+  width: 100%;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  gap: $gap-container;
+}

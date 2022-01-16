@@ -1,0 +1,32 @@
+.description-card {
+  width: 272px;
+  max-width: 300px;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: 16px;
+  // @each $name,
+  //   $url
+  //     in (
+  //       "frontend" "../assets/icons/icon-frontend.svg",
+  //       "backend" "../assets/icons/icon-backend.svg",
+  //       "languages" "../assets/icons/icon-languages.svg",
+  //       "technologies" "../assets/icons/icon-technology.png"
+  //     )
+  // {
+  //   &__icon-#{$name} {
+  //     height: 30px;
+  //     background: url(#{$url});
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //   }
+  // }
+}
+
+.description-card__information {
+  width: 100%;
+  display: grid;
+  gap: $gap-container;
+  h4 {
+    font-size: $size-text-2;
+  }
+}
