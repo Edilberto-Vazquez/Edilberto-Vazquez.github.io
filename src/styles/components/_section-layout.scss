@@ -1,0 +1,20 @@
+.section {
+  width: 100%;
+  height: auto;
+  margin-block-start: 24px;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: $gap-container;
+  &__title {
+    border-block-end: 2px solid $strong-color-primary;
+    font-size: $size-title-1;
+    color: $soft-secondary-color;
+  }
+  &__cards {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: $gap-container;
+    grid-template-columns: repeat(auto-fit, minmax(272px, 450px));
+  }
+}

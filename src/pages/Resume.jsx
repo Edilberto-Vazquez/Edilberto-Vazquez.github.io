@@ -1,4 +1,5 @@
 import React from "react";
+import SectionLayout from "../components/SectionLayout";
 import SectionCard from "../components/SectionCard";
 import { Education, Experience } from "../utils/resume";
 
@@ -6,8 +7,7 @@ const Resume = () => {
   return (
     <div className="resume">
       <div className="experience-education">
-        <h2 className="experience-education__title">Experience</h2>
-        <div className="experience-education__cards">
+        <SectionLayout title="Experience">
           {Experience.map(({ date, title, description }, index) => {
             return (
               <SectionCard
@@ -18,11 +18,8 @@ const Resume = () => {
               />
             );
           })}
-        </div>
-      </div>
-      <div className="experience-education">
-        <h2 className="experience-education__title">Education</h2>
-        <div className="experience-education__cards">
+        </SectionLayout>
+        <SectionLayout title="Education">
           {Education.map(({ date, title, description }, index) => {
             return (
               <SectionCard
@@ -33,7 +30,7 @@ const Resume = () => {
               />
             );
           })}
-        </div>
+        </SectionLayout>
       </div>
     </div>
   );
