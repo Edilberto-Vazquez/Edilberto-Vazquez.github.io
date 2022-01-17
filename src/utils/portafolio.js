@@ -5,7 +5,7 @@ import streamingVScinema from "../assets/images/streaming-vs-cinema.png";
 import mobilefirst from "../assets/images/mobile-first.png";
 import inaoe from "../assets/images/INAOE-weather-data-API.png";
 import myStore from "../assets/images/my-store.png";
-import ferreyans from "../assets/images/ferreyarns.jpg";
+import ferreyarns from "../assets/images/ferreyarns.jpg";
 
 const Projects = [
   {
@@ -121,7 +121,7 @@ const Projects = [
     information: {
       description:
         "Convert ferreyarns website from WordPress to React, all assets and designs as well as the brand belong to ferreyarns",
-      image: ferreyans,
+      image: ferreyarns,
       repository: "https://github.com/Edilberto-Vazquez/ferreyarns-clone-page",
       pageOrAPI: "https://github.com/Edilberto-Vazquez/ferreyarns-clone-page",
       technologiesUsed: [
