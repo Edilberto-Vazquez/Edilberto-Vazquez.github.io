@@ -61,12 +61,14 @@ const ProjectsCard = ({ projectName, information }) => {
         <a
           className="project-information__repository"
           href={information.repository}
+          target="_blank"
         >
           Repository
         </a>
         <a
           className="project-information__page-or-api"
           href={information.pageOrAPI}
+          target="_blank"
         >
           Page or API
         </a>

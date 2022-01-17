@@ -1,11 +1,10 @@
 .portafolio {
-  @include page-layout-flex(true);
+  @include page-layout-grid(true);
 }
 
 .projects {
   width: 100%;
   height: auto;
-  padding: $padding-container;
   display: flex;
   flex-direction: column;
   &__title {

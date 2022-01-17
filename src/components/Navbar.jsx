@@ -35,14 +35,17 @@ const Navbar = () => {
           <a
             className="social-networks-icons__github"
             href="https://github.com/Edilberto-Vazquez"
+            target="_blank"
           />
           <a
             className="social-networks-icons__linkedin"
             href="https://www.linkedin.com/in/edilberto-vazquez-luna-7a038621b/"
+            target="_blank"
           />
           <a
             className="social-networks-icons__twitter"
             href="https://twitter.com/edivazquez98"
+            target="_blank"
           />
         </div>
       </div>
