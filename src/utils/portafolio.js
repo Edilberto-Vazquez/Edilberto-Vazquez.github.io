@@ -121,7 +121,7 @@ const Projects = [
     information: {
       description:
         "Convert ferreyarns website from WordPress to React, all assets and designs as well as the brand belong to ferreyarns",
-      image: streamingVScinema,
+      image: { ferreyans },
       repository: "https://github.com/Edilberto-Vazquez/ferreyarns-clone-page",
       pageOrAPI: "https://github.com/Edilberto-Vazquez/ferreyarns-clone-page",
       technologiesUsed: [
