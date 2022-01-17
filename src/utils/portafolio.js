@@ -1,9 +1,31 @@
+import myWebsite from "../assets/images/my-website.png";
 import scientific from "../assets/images/scientific.png";
 import deavocado from "../assets/images/de-avocado-shop.png";
 import streamingVScinema from "../assets/images/streaming-vs-cinema.png";
 import mobilefirst from "../assets/images/mobile-first.png";
+import inaoe from "../assets/images/INAOE-weather-data-API.png";
+import myStore from "../assets/images/my-store.png";
 
 const Projects = [
+  {
+    projectName: "My Website",
+    information: {
+      description:
+        "This website was development to show some projects I have been working on such as websites with ReactJS, HTML, CSS and JavaScript Vailla and some REST APIS using Express and Golang",
+      image: myWebsite,
+      repository: "https://edilberto-vazquez.github.io/",
+      pageOrAPI:
+        "https://github.com/Edilberto-Vazquez/Edilberto-Vazquez.github.io",
+      technologiesUsed: [
+        "JavaScript",
+        "HTML",
+        "SASS",
+        "webpack",
+        "Babel",
+        "NodeJS",
+      ],
+    },
+  },
   {
     projectName: "Scientific",
     information: {
@@ -90,6 +112,28 @@ const Projects = [
         "Babel",
         "NodeJS",
       ],
+    },
+  },
+  {
+    projectName: "My-Store",
+    information: {
+      description:
+        "REST API that simulates a store This page was development with NodeJS and ExpressJS with Sequelize as ORM",
+      image: myStore,
+      repository: "https://github.com/Edilberto-Vazquez/my-store",
+      pageOrAPI: "https://github.com/Edilberto-Vazquez/my-store",
+      technologiesUsed: ["NodeJS", "JavaScript", "ExpressJS", "Sequelize"],
+    },
+  },
+  {
+    projectName: "INAOE weather data API",
+    information: {
+      description:
+        "Weather data REST API for INAOE weather stations. This page was development with Golang 1.17, Gin Web Framework and Gorm as ORM. The deploy was made to heroku with a Database in AWS.",
+      image: inaoe,
+      repository: "https://github.com/Edilberto-Vazquez/inaoe-weather-data-API",
+      pageOrAPI: "https://github.com/Edilberto-Vazquez/inaoe-weather-data-API",
+      technologiesUsed: ["Golang", "Gin Web Framework", "Gorm"],
     },
   },
 ];
