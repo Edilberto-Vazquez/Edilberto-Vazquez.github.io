@@ -1,6 +1,6 @@
 import React from "react";
 import SectionLayout from "../components/SectionLayout";
-import ProjectsCard from "../components/ProjectsCard";
+import ProjectCard from "../components/ProjectCard";
 import Projects from "../utils/portafolio";
 
 const Portafolio = () => {
@@ -9,7 +9,7 @@ const Portafolio = () => {
       <SectionLayout title="Projects">
         {Projects.map(({ projectName, information }) => {
           return (
-            <ProjectsCard
+            <ProjectCard
               projectName={projectName}
               information={information}
               key={projectName}

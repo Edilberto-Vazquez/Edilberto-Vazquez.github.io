@@ -1,9 +1,5 @@
 .section-card {
-  max-width: 450px;
-  min-width: 272px;
-  display: grid;
-  grid-auto-rows: max-content;
-  row-gap: $gap-container;
+  @include cards-layout;
   &__subtitle {
     max-width: 200px;
     font-size: $size-text-2;

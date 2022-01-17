@@ -12,9 +12,11 @@
   }
   &__cards {
     width: 100%;
+    height: auto;
     display: grid;
     justify-content: center;
-    gap: $gap-container;
+    grid-auto-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(272px, 450px));
+    gap: $gap-container;
   }
 }

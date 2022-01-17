@@ -1,7 +1,8 @@
 import React, { useState, createRef, useEffect } from "react";
 import arrowButton from "../assets/icons/icons8-flecha-ampliar-48.png";
+import website from "../assets/images/website.react.jpg";
 
-const ProjectsCard = ({ projectName, information }) => {
+const ProjectCard = ({ projectName, information }) => {
   const [display, setDisplay] = useState(false);
   const displayInfo = createRef();
   const displayButton = createRef();
@@ -23,10 +24,10 @@ const ProjectsCard = ({ projectName, information }) => {
   }, []);
 
   return (
-    <div className="project" key={projectName}>
+    <div className="project-card" key={projectName}>
       <button
         ref={displayButton}
-        className="project__display-information"
+        className="project-card__display-information"
         onClick={handleDisplay}
       >
         <img
@@ -39,16 +40,16 @@ const ProjectsCard = ({ projectName, information }) => {
       </button>
       <div
         ref={displayInfo}
-        className="project-information"
+        className="project-card__details"
         aria-expanded={display}
       >
-        <div className="project-information__description">
+        <div className="project-card__details-description">
           <h3>Description:</h3>
           <p>{information.description}</p>
         </div>
-        <div className="project-information__technologies-used">
+        <div className="project-card__details-technologies">
           <h3>Technologies Used:</h3>
-          <ul className="technologies">
+          <ul>
             {information.technologiesUsed.map((technology) => {
               return (
                 <li className="technology" key={technology}>
@@ -58,23 +59,19 @@ const ProjectsCard = ({ projectName, information }) => {
             })}
           </ul>
         </div>
-        <a
-          className="project-information__repository"
-          href={information.repository}
-          target="_blank"
-        >
-          Repository
-        </a>
-        <a
-          className="project-information__page-or-api"
-          href={information.pageOrAPI}
-          target="_blank"
-        >
-          Page or API
-        </a>
+        <div className="project-card__details-links">
+          <a href={information.repository}>Repository</a>
+          <a href={information.pageOrAPI}>Page or API</a>
+        </div>
+        <img
+          className="project-card__details-image"
+          src={website}
+          alt="project image"
+          aria-expanded={display}
+        />
       </div>
     </div>
   );
 };
 
-export default ProjectsCard;
+export default ProjectCard;

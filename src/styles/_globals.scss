@@ -62,6 +62,16 @@ li {
     contrast(98%);
 }
 
+/* cards layout */
+
+@mixin cards-layout {
+  max-width: 450px;
+  min-width: 272px;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: $gap-container;
+}
+
 @mixin section-layout {
   width: 100%;
   height: auto;

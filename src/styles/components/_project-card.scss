@@ -1,10 +1,9 @@
-.project {
-  width: 100%;
+.project-card {
   height: auto;
-  display: grid;
+  @include cards-layout;
 }
 
-.project__display-information {
+.project-card__display-information {
   width: 100%;
   height: 50px;
   display: flex;
@@ -12,7 +11,8 @@
   border: none;
   font-size: $size-text-2;
   background: $soft-primary-color;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   .arrow-image {
     height: 100%;
   }
@@ -21,46 +21,59 @@
   }
 }
 
-.project__display-information:hover {
-  background-color: $strong-color-primary;
-}
-
-.project-information {
+.project-card__details {
   width: 100%;
-  height: auto;
+  height: 300px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
-  gap: 12px;
-  overflow: hidden;
-  max-height: 500px;
-  transition: max-height 700ms linear;
-  font-size: $size-text-2;
-  div {
+  grid-template-rows: calc(45% - 16px) calc(45% - 16px) calc(10%);
+  row-gap: $gap-container;
+  &-description,
+  &-technologies {
     display: grid;
+    padding-inline: $padding-container;
   }
+  &-technologies {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(60px, 120px));
+    }
+  }
+  &-links {
+    width: 100%;
+    height: 100%;
+    padding-inline: $padding-container;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    a {
+      width: 115px;
+      height: 25px;
+      border: 1px solid $strong-color-primary;
+      border-radius: 5px;
+      text-decoration: none;
+      text-align: center;
+      color: $soft-secondary-color;
+    }
+    a:hover {
+      background-color: $strong-color-primary;
+    }
+  }
+  &-image {
+    width: 100%;
+    height: 316px;
+    position: relative;
+    bottom: calc(100% + 16px);
+    object-fit: cover;
+    max-width: 450px;
+    transition: max-width 700ms linear;
+  }
+  &-image[aria-expanded="true"] {
+    max-width: 0;
+    transition: max-width 1000ms cubic-bezier(0, 1, 0, 1);
+  }
+  h3,
+  p,
   a {
-    width: 150px;
-    height: 25px;
-    place-self: center;
-    text-decoration: none;
-    text-align: center;
-    color: $soft-secondary-color;
-    border: 1px solid $strong-color-primary;
-    border-radius: 5px;
-  }
-  a:hover {
-    background-color: $strong-color-primary;
-  }
-}
-
-.project-information[aria-expanded="true"] {
-  max-height: 0px;
-  transition: max-height 500ms cubic-bezier(0, 1, 0, 1);
-}
-
-.project-information__technologies-used {
-  .technologies {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 120px));
+    font-size: $size-text-2;
   }
 }
