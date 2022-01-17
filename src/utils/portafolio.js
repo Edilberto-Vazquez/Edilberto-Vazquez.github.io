@@ -5,6 +5,7 @@ import streamingVScinema from "../assets/images/streaming-vs-cinema.png";
 import mobilefirst from "../assets/images/mobile-first.png";
 import inaoe from "../assets/images/INAOE-weather-data-API.png";
 import myStore from "../assets/images/my-store.png";
+import ferreyans from "../assets/images/ferreyarns.png";
 
 const Projects = [
   {
@@ -23,6 +24,7 @@ const Projects = [
         "webpack",
         "Babel",
         "NodeJS",
+        "ReactJS",
       ],
     },
   },
@@ -111,6 +113,26 @@ const Projects = [
         "webpack",
         "Babel",
         "NodeJS",
+      ],
+    },
+  },
+  {
+    projectName: "Ferreyans website",
+    information: {
+      description:
+        "Convert ferreyarns website from WordPress to React, all assets and designs as well as the brand belong to ferreyarns",
+      image: streamingVScinema,
+      repository: "https://github.com/Edilberto-Vazquez/ferreyarns-clone-page",
+      pageOrAPI: "https://github.com/Edilberto-Vazquez/ferreyarns-clone-page",
+      technologiesUsed: [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "WebComponents",
+        "webpack",
+        "Babel",
+        "NodeJS",
+        "ReactJS",
       ],
     },
   },
