@@ -1,14 +1,23 @@
 .section-card {
   max-width: 450px;
   min-width: 272px;
+  display: grid;
+  grid-auto-rows: max-content;
+  row-gap: $gap-container;
   &__subtitle {
-    border-radius: 3px;
-    background-color: $strong-color-primary;
+    max-width: 200px;
+    font-size: $size-text-2;
+    color: $soft-primary-color;
   }
   &__title {
+    max-width: 200px;
+    border-radius: 3px;
+    background-color: $strong-color-primary;
     font-size: $size-text-2;
+    text-align: center;
   }
   &__information {
     font-size: $size-text-2;
+    text-align: justify;
   }
 }
