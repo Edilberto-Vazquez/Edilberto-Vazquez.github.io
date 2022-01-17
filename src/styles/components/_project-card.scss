@@ -13,11 +13,9 @@
   background: $soft-primary-color;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  .arrow-image {
-    height: 100%;
-  }
-  .arrow-image[aria-expanded="true"] {
-    transform: rotate(-90deg);
+  cursor: pointer;
+  .clic-image {
+    height: 90%;
   }
 }
 

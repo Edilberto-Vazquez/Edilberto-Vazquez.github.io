@@ -1,5 +1,5 @@
 import React, { useState, createRef, useEffect } from "react";
-import arrowButton from "../assets/icons/icons8-flecha-ampliar-48.png";
+import arrowButton from "../assets/icons/click.gif";
 
 const ProjectCard = ({ projectName, information }) => {
   const [display, setDisplay] = useState(false);
@@ -30,7 +30,7 @@ const ProjectCard = ({ projectName, information }) => {
         onClick={handleDisplay}
       >
         <img
-          className="arrow-image"
+          className="clic-image"
           src={arrowButton}
           alt="arrow icon"
           aria-expanded={display}
