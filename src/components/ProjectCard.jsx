@@ -1,6 +1,5 @@
 import React, { useState, createRef, useEffect } from "react";
 import arrowButton from "../assets/icons/icons8-flecha-ampliar-48.png";
-import website from "../assets/images/website.react.jpg";
 
 const ProjectCard = ({ projectName, information }) => {
   const [display, setDisplay] = useState(false);
