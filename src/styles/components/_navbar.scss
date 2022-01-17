@@ -4,6 +4,7 @@
   padding: $padding-container;
   display: grid;
   position: fixed;
+  z-index: 1;
   background-color: $strong-color-primary;
 }
 
