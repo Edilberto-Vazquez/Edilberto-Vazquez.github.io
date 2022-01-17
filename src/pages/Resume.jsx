@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceEducationCard from "../components/ExperienceEducationCard";
+import SectionCard from "../components/SectionCard";
 import { Education, Experience } from "../utils/resume";
 
 const Resume = () => {
@@ -10,10 +10,10 @@ const Resume = () => {
         <div className="experience-education__cards">
           {Experience.map(({ date, title, description }, index) => {
             return (
-              <ExperienceEducationCard
-                jobDate={date}
-                jobTitle={title}
-                jobDescription={description}
+              <SectionCard
+                subtitle={date}
+                title={title}
+                description={description}
                 key={index}
               />
             );
@@ -25,10 +25,10 @@ const Resume = () => {
         <div className="experience-education__cards">
           {Education.map(({ date, title, description }, index) => {
             return (
-              <ExperienceEducationCard
-                jobDate={date}
-                jobTitle={title}
-                jobDescription={description}
+              <SectionCard
+                subtitle={date}
+                title={title}
+                description={description}
                 key={index}
               />
             );

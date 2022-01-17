@@ -83,17 +83,6 @@ li {
   }
 }
 
-@mixin card-layout {
-  max-width: 450px;
-  min-width: 272px;
-  &__title {
-    font-size: $size-text-2;
-  }
-  &__information {
-    font-size: $size-text-2;
-  }
-}
-
 /* func */
 @mixin icons-styles($icons) {
   @each $class, $icon in $icons {

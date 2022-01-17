@@ -1,6 +1,6 @@
 import React from "react";
 import UserProfileCard from "../components/UserProfileCard";
-import DescriptionCard from "../components/DescriptionCard";
+import SectionCard from "../components/SectionCard";
 import { languagesAndTechnologies, WhatIDoList } from "../utils/information";
 
 const AboutMe = () => {
@@ -11,11 +11,10 @@ const AboutMe = () => {
         <h3 className="what-i-do__title">What I Do</h3>
         <div className="what-i-do__cards">
           {WhatIDoList.map((item, key) => (
-            <DescriptionCard
-              key={key}
-              iconName={item.icon}
+            <SectionCard
               title={item.title}
               description={item.description}
+              key={key}
             />
           ))}
         </div>
