@@ -13,9 +13,9 @@ const Projects = [
       description:
         "This website was development to show some projects I have been working on such as websites with ReactJS, HTML, CSS and JavaScript Vailla and some REST APIS using Express and Golang",
       image: myWebsite,
-      repository: "https://edilberto-vazquez.github.io/",
-      pageOrAPI:
+      repository:
         "https://github.com/Edilberto-Vazquez/Edilberto-Vazquez.github.io",
+      pageOrAPI: "https://edilberto-vazquez.github.io/",
       technologiesUsed: [
         "JavaScript",
         "HTML",
