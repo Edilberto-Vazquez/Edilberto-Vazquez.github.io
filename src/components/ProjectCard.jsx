@@ -65,7 +65,7 @@ const ProjectCard = ({ projectName, information }) => {
         </div>
         <img
           className="project-card__details-image"
-          src={website}
+          src={information.image}
           alt="project image"
           aria-expanded={display}
         />
