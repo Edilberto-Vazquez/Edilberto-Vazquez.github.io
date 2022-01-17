@@ -59,8 +59,12 @@ const ProjectCard = ({ projectName, information }) => {
           </ul>
         </div>
         <div className="project-card__details-links">
-          <a href={information.repository}>Repository</a>
-          <a href={information.pageOrAPI}>Page or API</a>
+          <a href={information.repository} target="_blank">
+            Repository
+          </a>
+          <a href={information.pageOrAPI} target="_blank">
+            Page or API
+          </a>
         </div>
         <img
           className="project-card__details-image"
