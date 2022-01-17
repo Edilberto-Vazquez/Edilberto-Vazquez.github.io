@@ -1,0 +1,14 @@
+.section-card {
+  max-width: 450px;
+  min-width: 272px;
+  &__subtitle {
+    border-radius: 3px;
+    background-color: $strong-color-primary;
+  }
+  &__title {
+    font-size: $size-text-2;
+  }
+  &__information {
+    font-size: $size-text-2;
+  }
+}
