@@ -1,11 +1,11 @@
 import myWebsite from "../assets/images/my-website.png";
-import scientific from "../assets/images/scientific.png";
+import scientific from "../assets/images/scientific.jpg";
 import deavocado from "../assets/images/de-avocado-shop.png";
 import streamingVScinema from "../assets/images/streaming-vs-cinema.png";
 import mobilefirst from "../assets/images/mobile-first.png";
 import inaoe from "../assets/images/INAOE-weather-data-API.png";
 import myStore from "../assets/images/my-store.png";
-import ferreyans from "../assets/images/ferreyarns.png";
+import ferreyans from "../assets/images/ferreyarns.jpg";
 
 const Projects = [
   {
