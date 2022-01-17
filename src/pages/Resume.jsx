@@ -7,7 +7,7 @@ const Resume = () => {
     <div className="resume">
       <div className="experience-education">
         <h2 className="experience-education__title">Experience</h2>
-        <div className="experience-education__items">
+        <div className="experience-education__cards">
           {Experience.map(({ date, title, description }, index) => {
             return (
               <ExperienceEducationCard
@@ -22,7 +22,7 @@ const Resume = () => {
       </div>
       <div className="experience-education">
         <h2 className="experience-education__title">Education</h2>
-        <div className="experience-education__items">
+        <div className="experience-education__cards">
           {Education.map(({ date, title, description }, index) => {
             return (
               <ExperienceEducationCard

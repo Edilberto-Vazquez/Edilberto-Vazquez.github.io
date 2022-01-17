@@ -5,7 +5,7 @@ const ExperienceEducationCard = ({ jobDate, jobTitle, jobDescription }) => {
     <div className="experience-education-card">
       <span className="experience-education-card__from-to-date">{jobDate}</span>
       <h3 className="experience-education-card__title">{jobTitle}</h3>
-      <p className="experience-education-card__description">{jobDescription}</p>
+      <p className="experience-education-card__information">{jobDescription}</p>
     </div>
   );
 };
