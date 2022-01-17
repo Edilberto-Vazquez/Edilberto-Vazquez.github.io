@@ -19,6 +19,10 @@
   display: grid;
   place-items: center;
   gap: $gap-container;
+  &__job-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
   &__name {
     font-size: $size-title-2;
     color: $soft-secondary-color;
