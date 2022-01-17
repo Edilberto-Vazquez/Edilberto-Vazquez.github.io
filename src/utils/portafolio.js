@@ -1,6 +1,7 @@
 import scientific from "../assets/images/scientific.png";
 import deavocado from "../assets/images/de-avocado-shop.png";
 import streamingVScinema from "../assets/images/streaming-vs-cinema.png";
+import mobilefirst from "../assets/images/mobile-first.png";
 
 const Projects = [
   {
@@ -43,23 +44,33 @@ const Projects = [
       ],
     },
   },
+  // {
+  //   projectName: {mobilefirst},
+  //   information: {
+  //     description:
+  //       "this page was created to practice with react using redux and react-router-dom",
+  //     image: streamingVScinema,
+  //     repository: "https://github.com/Edilberto-Vazquez/Video-Page",
+  //     pageOrAPI: "https://github.com/Edilberto-Vazquez/Video-Page",
+  //     technologiesUsed: [
+  //       "JavaScript",
+  //       "HTML",
+  //       "CSS",
+  //       "webpack",
+  //       "Babel",
+  //       "NodeJS",
+  //       "SASS",
+  //     ],
+  //   },
+  // },
   {
-    projectName: "Page to watch videos",
+    projectName: "Mobile First",
     information: {
-      description:
-        "this page was created to practice with react using redux and react-router-dom",
-      image: streamingVScinema,
-      repository: "https://github.com/Edilberto-Vazquez/Video-Page",
-      pageOrAPI: "https://github.com/Edilberto-Vazquez/Video-Page",
-      technologiesUsed: [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "webpack",
-        "Babel",
-        "NodeJS",
-        "SASS",
-      ],
+      description: "Aplication development with mobile-first philosophy",
+      image: mobilefirst,
+      repository: "https://github.com/Edilberto-Vazquez/mobileFirst",
+      pageOrAPI: "https://edilberto-vazquez.github.io/mobileFirst/",
+      technologiesUsed: ["HTML", "CSS"],
     },
   },
   {
