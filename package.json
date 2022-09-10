@@ -1,50 +1,31 @@
 {
   "name": "website-ui",
-  "version": "1.0.0",
-  "description": "my website",
+  "version": "0.1.0",
   "private": true,
-  "main": "index.js",
   "scripts": {
-    "bootstrap": "yarn install -W && npx lerna bootstrap",
-    "start:dev": "npx lerna run dev --scope=game-shop-ui-app",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "prepare": "husky install"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Edilberto-Vazquez/website-ui.git"
+  "dependencies": {
+    "next": "12.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
-  "keywords": [
-    "JavaScript",
-    "NextJS",
-    "HTML",
-    "CSS",
-    "SASS",
-    "Lerna"
-  ],
-  "author": " <Edilberto-Vazquez>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Edilberto-Vazquez/website-ui/issues"
-  },
-  "homepage": "https://github.com/Edilberto-Vazquez/website-ui#readme",
   "devDependencies": {
     "eslint": "8.0.1",
+    "eslint-config-prettier": "8.5.0",
     "eslint-config-standard": "17.0.0",
     "eslint-plugin-import": "2.25.2",
     "eslint-plugin-n": "15.0.0",
     "eslint-plugin-promise": "6.0.0",
     "eslint-plugin-react": "7.31.8",
     "husky": "8.0.1",
-    "lerna": "5.4.1",
-    "lint-staged": "13.0.3"
-  },
-  "dependencies": {
+    "lint-staged": "13.0.3",
     "prettier": "2.7.1"
   },
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "lint-staged": {
     "*.js": "eslint --cache --fix",
     "*.{js,jsx,css,md}": "prettier --write"
