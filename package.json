@@ -1,0 +1,52 @@
+{
+  "name": "website-ui",
+  "version": "1.0.0",
+  "description": "my website",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "yarn install -W && npx lerna bootstrap",
+    "start:dev": "npx lerna run dev --scope=game-shop-ui-app",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edilberto-Vazquez/website-ui.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "NextJS",
+    "HTML",
+    "CSS",
+    "SASS",
+    "Lerna"
+  ],
+  "author": " <Edilberto-Vazquez>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Edilberto-Vazquez/website-ui/issues"
+  },
+  "homepage": "https://github.com/Edilberto-Vazquez/website-ui#readme",
+  "devDependencies": {
+    "eslint": "8.0.1",
+    "eslint-config-standard": "17.0.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-n": "15.0.0",
+    "eslint-plugin-promise": "6.0.0",
+    "eslint-plugin-react": "7.31.8",
+    "husky": "8.0.1",
+    "lerna": "5.4.1",
+    "lint-staged": "13.0.3"
+  },
+  "dependencies": {
+    "prettier": "2.7.1"
+  },
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{js,jsx,css,md}": "prettier --write"
+  }
+}
