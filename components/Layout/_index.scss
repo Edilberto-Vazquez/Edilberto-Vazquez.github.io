@@ -1,0 +1,24 @@
+.main-container {
+  width: 100vw;
+  min-height: 100vh;
+  max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+  .main-container {
+    color: var(--text-primary);
+    background: var(--color-primary);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .main-container {
+    color: var(--text-primary);
+    background: var(--color-primary);
+  }
+}

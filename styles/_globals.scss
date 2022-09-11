@@ -1,0 +1,76 @@
+:root {
+  // $color-primary-light: #fff;
+  // $color-primary-dark: #0e0e10;
+  // $color-secondary-dark: #161b22;
+
+  // $text-primary-dark: #26282b;
+  // $text-primary-light: #fff;
+  // $text-secondary-dark: #616161;
+  // $text-secondary-light: #bdbdbd;
+  --color-primary: #0e0e10;
+  --color-secondary: #161b22;
+
+  --text-primary: #fff;
+  --text-secondary: #bdbdbd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #0e0e10;
+    --color-secondary: #161b22;
+
+    --text-primary: #fff;
+    --text-secondary: #bdbdbd;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-primary: #fff;
+    --color-secondary: #fff;
+
+    --text-primary: #26282b;
+    --text-secondary: #bdbdbd;
+  }
+}
+
+[data-theme="dark"] {
+  --color-primary: #0e0e10;
+  --color-secondary: #161b22;
+
+  --text-primary: #fff;
+  --text-secondary: #bdbdbd;
+}
+
+[data-theme="light"] {
+  --color-primary: #fff;
+  --color-secondary: #fff;
+
+  --text-primary: #26282b;
+  --text-secondary: #bdbdbd;
+}
+
+@mixin link-theme($color-value) {
+  color: $color-value;
+  text-decoration: none;
+}
+
+.link-theme-dark {
+  @include link-theme(#fff);
+}
+
+.link-theme-light {
+  @include link-theme(#26282b);
+}
+
+@media (prefers-color-scheme: dark) {
+  .link-theme {
+    @include link-theme(var(--text-primary));
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .link-theme {
+    @include link-theme(var(--text-primary));
+  }
+}
