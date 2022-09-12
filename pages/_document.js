@@ -27,13 +27,13 @@ function setInitialColorMode() {
     [true, "dark"],
     [false, "light"],
   ])
-  const storedTheme = window.localStorage.getItem("data-theme")
+  const storedTheme = window.localStorage.getItem("color-mode")
   if (typeof storedTheme === "string") {
     theme = storedTheme
   } else {
     const { matches } = window.matchMedia("(prefers-color-scheme: dark)")
-    window.localStorage.setItem("data-theme", themes.get(matches))
+    window.localStorage.setItem("color-mode", themes.get(matches))
     theme = themes.get(matches)
   }
-  document.documentElement.setAttribute("data-theme", theme)
+  document.documentElement.setAttribute("color-mode", theme)
 }

@@ -11,16 +11,15 @@ const Header = () => {
       [false, "light"],
     ])
     document.documentElement.setAttribute(
-      "data-theme",
+      "color-mode",
       theme.get(e.target.checked)
     )
-    window.localStorage.setItem("data-theme", theme.get(e.target.checked))
+    window.localStorage.setItem("color-mode", theme.get(e.target.checked))
     setTheme(theme.get(e.target.checked))
-    console.log("a")
   }
 
   useEffect(() => {
-    const storedTheme = window.localStorage.getItem("data-theme")
+    const storedTheme = window.localStorage.getItem("color-mode")
     setTheme(storedTheme)
   }, [])
 

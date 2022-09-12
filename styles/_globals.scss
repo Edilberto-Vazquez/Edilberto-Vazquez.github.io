@@ -34,7 +34,7 @@
   }
 }
 
-[data-theme="dark"] {
+[color-mode="dark"] {
   --color-primary: #0e0e10;
   --color-secondary: #161b22;
 
@@ -42,7 +42,7 @@
   --text-secondary: #bdbdbd;
 }
 
-[data-theme="light"] {
+[color-mode="light"] {
   --color-primary: #fff;
   --color-secondary: #fff;
 
