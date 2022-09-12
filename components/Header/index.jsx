@@ -34,7 +34,14 @@ const Header = () => {
         </div>
         <div className="social-networks">
           <CustomLink href="github.com/Edilberto-Vazquez">
-            <Icon content="/assets/icons/github.svg" alt="github" />
+            <Icon
+              content={
+                theme === "dark"
+                  ? "/assets/icons/github-light.svg"
+                  : "/assets/icons/github-dark.svg"
+              }
+              alt="github"
+            />
           </CustomLink>
           <CustomLink href="github.com/Edilberto-Vazquez">
             <Icon content="/assets/icons/linkedin.svg" alt="linkedin" />
