@@ -18,6 +18,7 @@ const Header = () => {
     window.localStorage.setItem("color-mode", themes.get(e.target.checked))
     setTheme(themes.get(e.target.checked))
   }
+
   useEffect(() => {
     const storedTheme = window.localStorage.getItem("color-mode")
     setTheme(storedTheme)
@@ -37,8 +38,8 @@ const Header = () => {
             <Icon
               content={
                 theme === "dark"
-                  ? "/assets/icons/github-light.svg"
-                  : "/assets/icons/github-dark.svg"
+                  ? "/assets/icons/github-dark.svg"
+                  : "/assets/icons/github-light.svg"
               }
               alt="github"
             />

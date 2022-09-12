@@ -1,7 +1,8 @@
 :root {
   --header-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9),
     0 0px 2px rgba(0, 0, 0, 0.9);
-  --mobile-menu-icon: url("/assets/icons/burger-menu-dark.svg");
+  --burger-menu-icon: url("/assets/icons/burger-menu-dark.svg");
+  --close-menu-icon: url("/assets/icons/close-menu-dark.svg");
 }
 
 .header {
@@ -28,14 +29,21 @@
     position: absolute;
     right: 24px;
     appearance: none;
-    background: var(--mobile-menu-icon);
+    background: var(--burger-menu-icon);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    transition: all 0.1s ease-in-out;
   }
   &__nav-icon-mobile:checked + .nav {
     transform: translateX(0%);
+  }
+  &__nav-icon-mobile:checked {
+    background: var(--close-menu-icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .nav {
     width: 100vw;
@@ -108,11 +116,13 @@
 [color-mode="dark"] {
   --header-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9),
     0 0px 2px rgba(0, 0, 0, 0.9);
-  --mobile-menu-icon: url("/assets/icons/burger-menu-dark.svg");
+  --burger-menu-icon: url("/assets/icons/burger-menu-dark.svg");
+  --close-menu-icon: url("/assets/icons/close-menu-dark.svg");
 }
 
 [color-mode="light"] {
   --header-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15),
     0 0px 2px rgba(0, 0, 0, 0.1);
-  --mobile-menu-icon: url("/assets/icons/burger-menu-light.svg");
+  --burger-menu-icon: url("/assets/icons/burger-menu-light.svg");
+  --close-menu-icon: url("/assets/icons/close-menu-light.svg");
 }
