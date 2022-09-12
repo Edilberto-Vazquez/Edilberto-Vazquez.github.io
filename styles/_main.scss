@@ -7,6 +7,10 @@
 @import "../components/Navigation/CustomLink/custom-link";
 @import "../components/Header/header";
 @import "../components/Layout/layout";
+@import "../components/ProfileCard/profile-card";
+
+// ---Pages---
+@import "./main-page";
 
 * {
   box-sizing: border-box;
