@@ -3,9 +3,10 @@
 @import "./globals";
 
 // ---Components---
-@import "../components/Icon/";
-@import "../components/Header/";
-@import "../components/Layout/";
+@import "../components/Inputs/ToggleSwitch/toggle-switch";
+@import "../components/Navigation/CustomLink/custom-link";
+@import "../components/Header/header";
+@import "../components/Layout/layout";
 
 * {
   box-sizing: border-box;
@@ -23,7 +24,8 @@ html {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  justify-items: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media (prefers-color-scheme: dark) {

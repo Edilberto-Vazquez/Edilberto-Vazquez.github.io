@@ -1,3 +1,8 @@
+:root {
+  --header-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9),
+    0 0px 2px rgba(0, 0, 0, 0.9);
+}
+
 .header {
   width: 100%;
   height: 64px;
@@ -8,9 +13,10 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0px 2px rgba(0, 0, 0, 0.9);
+  box-shadow: var(--header-box-shadow);
   font-size: 1.8rem;
   font-weight: 500;
+  background-color: var(--color-secondary);
   &__logo {
     width: 64px;
     width: 64px;
@@ -34,13 +40,13 @@
     width: 100vw;
     height: 100vh;
     display: none;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: 100px 100px min-content;
     justify-self: center;
     place-items: center;
     position: absolute;
     top: 64px;
     left: 0;
-    background-color: #161b22;
+    background-color: var(--color-secondary);
     .pages {
       width: 100%;
       height: auto;
@@ -55,6 +61,18 @@
       grid-template-columns: repeat(3, 1fr);
       place-items: center;
     }
+    .color-mode {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-auto-rows: min-content;
+      place-content: center;
+      place-items: center;
+      row-gap: 2px;
+      &__text {
+        font-size: 1.2rem;
+      }
+    }
   }
 }
 
@@ -66,7 +84,9 @@
     .nav {
       max-width: 400px;
       height: 64px;
-      display: flex;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 150px 180px 70px;
       position: relative;
       top: 0;
       background-color: transparent;
@@ -81,14 +101,12 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .header {
-    background: #161b22;
-  }
+[color-mode="dark"] {
+  --header-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9),
+    0 0px 2px rgba(0, 0, 0, 0.9);
 }
 
-@media (prefers-color-scheme: light) {
-  .header {
-    background: #161b22;
-  }
+[color-mode="light"] {
+  --header-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15),
+    0 0px 2px rgba(0, 0, 0, 0.1);
 }

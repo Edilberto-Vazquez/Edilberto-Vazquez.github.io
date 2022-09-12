@@ -1,0 +1,24 @@
+@mixin link-theme($color-value) {
+  color: $color-value;
+  text-decoration: none;
+}
+
+.link-theme-dark {
+  @include link-theme(#fff);
+}
+
+.link-theme-light {
+  @include link-theme(#26282b);
+}
+
+@media (prefers-color-scheme: dark) {
+  .link-theme {
+    @include link-theme(var(--text-primary));
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .link-theme {
+    @include link-theme(var(--text-primary));
+  }
+}
