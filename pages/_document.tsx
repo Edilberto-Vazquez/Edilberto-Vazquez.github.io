@@ -24,7 +24,7 @@ const themeInitializer = `(${setInitialColorMode.toString()}())`
 
 function setInitialColorMode() {
   let theme = ""
-  const themes = new Map([
+  const themes = new Map<boolean, string>([
     [true, "dark"],
     [false, "light"],
   ])

@@ -1,5 +1,5 @@
+import Image from "next/image"
 import React from "react"
-import Icon from "../../Icon"
 import Technologies from "../Technologies"
 
 type ProfileCardProps = {
@@ -18,7 +18,7 @@ const ProfileCard = ({
   return (
     <div className="card-profile">
       <div className="card-header">
-        <img className="card-header__image" src={image} alt="profile image" />
+        <Image className="card-header__image" src={image} alt="profile image" />
         <h3 className="card-header__name">{name}</h3>
       </div>
       <div className="card-description">
