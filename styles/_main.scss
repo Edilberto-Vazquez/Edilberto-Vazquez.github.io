@@ -36,6 +36,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: dark) {

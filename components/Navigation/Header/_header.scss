@@ -93,10 +93,10 @@
       display: none;
     }
     .nav {
-      width: auto;
+      width: 450px;
       height: 64px;
       grid-template-rows: 100%;
-      grid-template-columns: repeat(3, min-content);
+      grid-template-columns: 200px 180px 70px;
       position: relative;
       top: 0;
       background-color: transparent;

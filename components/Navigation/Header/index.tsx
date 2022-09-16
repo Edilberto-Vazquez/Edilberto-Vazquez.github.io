@@ -30,6 +30,7 @@ const Header = (): JSX.Element => {
       <input className="header__nav-icon-mobile" type="checkbox" />
       <nav className="nav">
         <div className="pages">
+          <CustomLink href="/">Projects</CustomLink>
           <CustomLink href="/about">About</CustomLink>
         </div>
         <div className="social-networks">
