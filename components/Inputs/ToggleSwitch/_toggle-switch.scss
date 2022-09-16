@@ -15,11 +15,11 @@
     position: absolute;
     transition: 0.3s;
     border-radius: 50px;
-    border: 1px solid #161b22;
+    border: 1px solid #8b949e;
   }
   &__input:checked ~ &__slider {
     border: 1px solid #fff;
-    background-color: #161b22;
+    background-color: #8b949e;
   }
   &__slider::before {
     content: "";
@@ -30,12 +30,12 @@
     left: 2px;
     transition: 0.3s;
     border-radius: 50px;
-    background-color: #161b22;
+    background-color: #8b949e;
     box-shadow: none;
   }
   &__input:checked ~ &__slider::before {
     transform: translateX(22px);
-    background-color: #161b22;
+    background-color: #8b949e;
     box-shadow: inset -7px 0px 0px 0px #fff;
   }
 }
