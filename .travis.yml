@@ -7,14 +7,15 @@ node_js:
 git:
   depth: 3
 script:
-  - yarn build
+  - yarn run build
+  - yarn run export
 deploy:
   provider: pages
   edge: true
   skip_cleanup: true
   keep_histoyry: true
   github-token: $GITHUB_TOKEN
-  local_dir: next/
+  local_dir: out
   target_branch: gh-pages
   commit_message: "Deploy Release"
   on:

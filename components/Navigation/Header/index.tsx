@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Icon from "../../Icon"
+import Icon from "../../CustomIcon"
 import ToggleSwitch from "../../Inputs/ToggleSwitch"
 import CustomLink from "../CustomLink"
 
