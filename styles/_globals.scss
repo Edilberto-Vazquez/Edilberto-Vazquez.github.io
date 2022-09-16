@@ -56,3 +56,10 @@
 
   --card-border: 1px solid #d0d7de;
 }
+
+@mixin card-style {
+  padding: 16px;
+  border: var(--card-border);
+  border-radius: 8px;
+  background-color: var(--color-secondary);
+}

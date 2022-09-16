@@ -31,7 +31,6 @@ const Header = (): JSX.Element => {
       <nav className="nav">
         <div className="pages">
           <CustomLink href="/about">About</CustomLink>
-          <CustomLink href="/resume">Resume</CustomLink>
         </div>
         <div className="social-networks">
           <CustomLink href="github.com/Edilberto-Vazquez">

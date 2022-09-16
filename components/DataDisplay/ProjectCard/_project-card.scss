@@ -1,16 +1,14 @@
 .project-card {
   width: 100%;
   height: 100%;
-  padding: 16px;
   display: grid;
   grid-auto-rows: min-content;
   align-items: center;
   gap: 12px;
   background-color: var(--color-secondary);
-  border-radius: 8px;
-  border: var(--card-border);
+  @include card-style;
   &__repository {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     text-decoration: none;
     color: var(--text-primary);
   }

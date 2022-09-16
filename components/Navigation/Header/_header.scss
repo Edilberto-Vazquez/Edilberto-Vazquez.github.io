@@ -66,14 +66,14 @@
       place-items: center;
     }
     .social-networks {
-      width: 100%;
+      width: 180px;
       height: auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       place-items: center;
     }
     .color-mode {
-      width: 100%;
+      width: 70px;
       height: 100%;
       display: grid;
       grid-auto-rows: min-content;
@@ -93,10 +93,10 @@
       display: none;
     }
     .nav {
-      max-width: 400px;
+      width: auto;
       height: 64px;
       grid-template-rows: 100%;
-      grid-template-columns: 150px 180px 70px;
+      grid-template-columns: repeat(3, min-content);
       position: relative;
       top: 0;
       background-color: transparent;
