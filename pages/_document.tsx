@@ -23,12 +23,12 @@ export default function Document() {
 const themeInitializer = `(${setInitialColorMode.toString()}())`
 
 function setInitialColorMode() {
-  let theme = ""
+  let theme: string
   const themes = new Map<boolean, string>([
     [true, "dark"],
     [false, "light"],
   ])
-  const storedTheme = window.localStorage.getItem("color-mode")
+  const storedTheme: string = window.localStorage.getItem("color-mode")
   if (typeof storedTheme === "string") {
     theme = storedTheme
   } else {

@@ -1,4 +1,3 @@
-import Image from "next/image"
 import React from "react"
 import Technologies from "../Technologies"
 
@@ -18,7 +17,7 @@ const ProfileCard = ({
   return (
     <div className="card-profile">
       <div className="card-header">
-        <Image className="card-header__image" src={image} alt="profile image" />
+        <img className="card-header__image" src={image} alt="profile image" />
         <h3 className="card-header__name">{name}</h3>
       </div>
       <div className="card-description">
