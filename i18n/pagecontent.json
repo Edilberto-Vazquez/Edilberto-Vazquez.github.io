@@ -26,6 +26,38 @@
         "technologies": ["JavaScript", "TypeScript", "NextJS", "React", "SASS"],
         "liveDemo": ""
       }
+    ],
+    "jobs": [
+      {
+        "position": "Front-end",
+        "company": "Full Stack",
+        "location": "Puebla, Mexico",
+        "description": "Professional internship contract as Front-End developer in FullStack. Work done, migration of the ferreyarns website from Worpress to ReactJS, development of the Vetech site for the management of pet consultations for veterinarians.",
+        "dates": {
+          "from": "2021-05",
+          "to": "2021-09"
+        }
+      },
+      {
+        "position": "Front-end",
+        "company": "Kannbal",
+        "location": "Mexico City, Mexico",
+        "description": "Front-End developer in kannbal conuslting. Development of web solutions for LMS like Edmodo, Moodle etc, using HTML, CSS, JavaScript, and Web Development with ReactJS.",
+        "dates": {
+          "from": "2022-01",
+          "to": "2022-02"
+        }
+      },
+      {
+        "position": "Full-Stack",
+        "company": "BluePixel",
+        "location": "Mexico City, Mexico",
+        "description": "Front-end development with NextJS, Graphql and ApolloClient and Material-UI and Back-end devlopment with NodeJS, ApolloServer, Python, MongoDB, MySQL, Docker.",
+        "dates": {
+          "from": "2022-03",
+          "to": "present"
+        }
+      }
     ]
   }
 }

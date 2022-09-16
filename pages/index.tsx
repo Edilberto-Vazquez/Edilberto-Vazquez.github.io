@@ -1,7 +1,7 @@
 import React from "react"
+import PageContent from "../i18n/pagecontent.json"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
-import PageContent from "../i18n/pagecontent.json"
 import ProjectList from "../components/DataDisplay/ProjectsList"
 
 export default function Home(): JSX.Element {

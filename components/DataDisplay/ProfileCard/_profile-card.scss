@@ -21,7 +21,7 @@
     }
     &__name {
       width: 100%;
-      font-size: 2.4rem;
+      font-size: var(--section-title-size);
       text-align: center;
     }
   }
