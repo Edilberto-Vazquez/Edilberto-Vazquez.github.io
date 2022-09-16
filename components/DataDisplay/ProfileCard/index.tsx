@@ -1,5 +1,6 @@
 import React from "react"
 import Icon from "../../Icon"
+import Technologies from "../Technologies"
 
 type ProfileCardProps = {
   image: string
@@ -23,14 +24,7 @@ const ProfileCard = ({
       <div className="card-description">
         <p className="card-description__description">{descirption}</p>
       </div>
-      <div className="card-technologies">
-        {technologies.map((technology: string) => (
-          <span key={name} className="card-technologies__chip">
-            <Icon icon={technology} width="20px" height="20px" />
-            {technology}
-          </span>
-        ))}
-      </div>
+      <Technologies technologies={technologies} />
     </div>
   )
 }

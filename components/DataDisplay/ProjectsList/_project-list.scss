@@ -1,0 +1,14 @@
+.project-list {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-auto-rows: minmax(120px, 1fr);
+  row-gap: 16px;
+  &__item {
+    width: 100%;
+    height: auto;
+    display: grid;
+    place-items: center;
+    list-style: none;
+  }
+}

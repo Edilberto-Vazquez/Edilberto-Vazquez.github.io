@@ -4,8 +4,9 @@
     "name": "Edilberto Vazquez Luna",
     "descirption": "Hello, Welcome to my Website where you can see my projects and otherthings. I am currently working as a JavaScript developer but I work with other languages such like Go",
     "technologies": [
-      "NextJS",
       "JavaScript",
+      "TypeScript",
+      "NextJS",
       "CSS",
       "SASS",
       "Graphql",
@@ -19,10 +20,11 @@
     ],
     "projects": [
       {
-        "name": "website",
-        "description": "my website",
+        "name": "Edilberto-Vazquez/website-ui",
+        "description": "My website for show my projects",
         "repository": "https://github.com/Edilberto-Vazquez/website-ui",
-        "technologies": ["JavaScript", "TypeScript", "NextJS", "React", "SASS"]
+        "technologies": ["JavaScript", "TypeScript", "NextJS", "React", "SASS"],
+        "liveDemo": ""
       }
     ]
   }

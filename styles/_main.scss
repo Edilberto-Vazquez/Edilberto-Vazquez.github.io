@@ -11,7 +11,9 @@
 @import "../components/Layout/layout";
 
 @import "../components/DataDisplay/ProfileCard/profile-card";
-@import "../components/DataDisplay/ProjectItem/projects-section";
+@import "../components/DataDisplay/ProjectsList/project-list";
+@import "../components/DataDisplay/ProjectCard/project-card";
+@import "../components/DataDisplay/Technologies/technologies";
 
 // ---Pages---
 @import "./main-page";

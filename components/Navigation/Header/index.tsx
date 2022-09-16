@@ -6,7 +6,7 @@ import CustomLink from "../CustomLink"
 const Header = (): JSX.Element => {
   const [theme, setTheme] = useState<string>("dark")
 
-  const handleTheme = (e: { target: { checked: boolean } }) => {
+  const handleTheme = (e: { target: { checked: boolean } }): void => {
     const themes = new Map([
       [true, "dark"],
       [false, "light"],

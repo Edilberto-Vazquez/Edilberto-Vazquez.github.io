@@ -1,4 +1,6 @@
-export type ImageProps = {
-  src: string
-  alt: string
+export type Project = {
+  name: string
+  description: string
+  repository: string
+  technologies: string[]
 }

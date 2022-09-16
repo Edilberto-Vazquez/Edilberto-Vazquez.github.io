@@ -7,9 +7,9 @@ type ToggleSwitchProps = {
 }
 
 const ToggleSwitch = ({
-  onChange,
-  checked,
   id,
+  checked,
+  onChange,
 }: ToggleSwitchProps): JSX.Element => {
   return (
     <label className="toggle-switch" htmlFor={id}>
