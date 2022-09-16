@@ -4,10 +4,14 @@
 
 // ---Components---
 @import "../components/Inputs/ToggleSwitch/toggle-switch";
+
 @import "../components/Navigation/CustomLink/custom-link";
-@import "../components/Header/header";
+@import "../components/Navigation/Header/header";
+
 @import "../components/Layout/layout";
-@import "../components/ProfileCard/profile-card";
+
+@import "../components/DataDisplay/ProfileCard/profile-card";
+@import "../components/DataDisplay/ProjectItem/projects-section";
 
 // ---Pages---
 @import "./main-page";

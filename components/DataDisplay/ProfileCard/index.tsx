@@ -1,17 +1,19 @@
 import React from "react"
-import Icon from "../Icon"
+import Icon from "../../Icon"
 
 type ProfileCardProps = {
-  data: {
-    image: string
-    name: string
-    descirption: string
-    technologies: { name: string; icon: string }[]
-  }
+  image: string
+  name: string
+  descirption: string
+  technologies: string[]
 }
 
-const ProfileCard = ({ data }: ProfileCardProps): JSX.Element => {
-  const { image, name, descirption, technologies } = data
+const ProfileCard = ({
+  image,
+  name,
+  descirption,
+  technologies,
+}: ProfileCardProps): JSX.Element => {
   return (
     <div className="card-profile">
       <div className="card-header">
@@ -22,10 +24,10 @@ const ProfileCard = ({ data }: ProfileCardProps): JSX.Element => {
         <p className="card-description__description">{descirption}</p>
       </div>
       <div className="card-technologies">
-        {technologies.map(({ name, icon }) => (
+        {technologies.map((technology: string) => (
           <span key={name} className="card-technologies__chip">
-            <Icon image={{ src: icon, alt: name }} width="20px" height="20px" />
-            {name}
+            <Icon icon={technology} width="20px" height="20px" />
+            {technology}
           </span>
         ))}
       </div>

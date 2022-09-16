@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import Icon from "../Icon"
-import ToggleSwitch from "../Inputs/ToggleSwitch"
-import CustomLink from "../Navigation/CustomLink"
+import Icon from "../../Icon"
+import ToggleSwitch from "../../Inputs/ToggleSwitch"
+import CustomLink from "../CustomLink"
 
 const Header = (): JSX.Element => {
   const [theme, setTheme] = useState<string>("dark")
@@ -35,25 +35,13 @@ const Header = (): JSX.Element => {
         </div>
         <div className="social-networks">
           <CustomLink href="github.com/Edilberto-Vazquez">
-            <Icon
-              image={{
-                src:
-                  theme === "dark"
-                    ? "/assets/icons/github-dark.svg"
-                    : "/assets/icons/github-light.svg",
-                alt: "github",
-              }}
-            />
+            <Icon icon="github" />
           </CustomLink>
           <CustomLink href="github.com/Edilberto-Vazquez">
-            <Icon
-              image={{ src: "/assets/icons/linkedin.svg", alt: "linkedin" }}
-            />
+            <Icon icon="linkedin" />
           </CustomLink>
           <CustomLink href="github.com/Edilberto-Vazquez">
-            <Icon
-              image={{ src: "/assets/icons/twitter.svg", alt: "twitter" }}
-            />
+            <Icon icon="tiwtter" />
           </CustomLink>
         </div>
         <div className="color-mode">

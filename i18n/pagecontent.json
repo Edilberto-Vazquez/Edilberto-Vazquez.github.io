@@ -1,27 +1,29 @@
 {
-  "profileCard": {
+  "profile": {
     "image": "https://s.gravatar.com/avatar/1bf51742e09fee803505b9c0a845e262?s=80",
     "name": "Edilberto Vazquez Luna",
     "descirption": "Hello, Welcome to my Website where you can see my projects and otherthings. I am currently working as a JavaScript developer but I work with other languages such like Go",
     "technologies": [
-      { "name": "Nextjs", "icon": "/assets/icons/technologies/nextjs.png" },
+      "NextJS",
+      "JavaScript",
+      "CSS",
+      "SASS",
+      "Graphql",
+      "NodeJS",
+      "Golang",
+      "Docker",
+      "Git",
+      "Sequelize",
+      "MongoDB",
+      "SQL"
+    ],
+    "projects": [
       {
-        "name": "JavaScript",
-        "icon": "/assets/icons/technologies/javascript.svg"
-      },
-      { "name": "CSS", "icon": "/assets/icons/technologies/css.svg" },
-      { "name": "SASS", "icon": "/assets/icons/technologies/sass.svg" },
-      { "name": "Graphql", "icon": "/assets/icons/technologies/graphql.svg" },
-      { "name": "NodeJS", "icon": "/assets/icons/technologies/nodejs.svg" },
-      { "name": "Golang", "icon": "/assets/icons/technologies/golang.svg" },
-      { "name": "Docker", "icon": "/assets/icons/technologies/docker.svg" },
-      { "name": "Git", "icon": "/assets/icons/technologies/git.svg" },
-      {
-        "name": "Sequelize",
-        "icon": "/assets/icons/technologies/sequelize.svg"
-      },
-      { "name": "MongoDB", "icon": "/assets/icons/technologies/mongodb.svg" },
-      { "name": "SQL", "icon": "/assets/icons/technologies/sql.svg" }
+        "name": "website",
+        "description": "my website",
+        "repository": "https://github.com/Edilberto-Vazquez/website-ui",
+        "technologies": ["JavaScript", "TypeScript", "NextJS", "React", "SASS"]
+      }
     ]
   }
 }
