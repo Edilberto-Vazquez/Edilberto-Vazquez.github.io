@@ -3,10 +3,10 @@ import Icon from "../Icon"
 import ToggleSwitch from "../Inputs/ToggleSwitch"
 import CustomLink from "../Navigation/CustomLink"
 
-const Header = () => {
-  const [theme, setTheme] = useState("dark")
+const Header = (): JSX.Element => {
+  const [theme, setTheme] = useState<string>("dark")
 
-  const handleTheme = (e) => {
+  const handleTheme = (e: { target: { checked: boolean } }) => {
     const themes = new Map([
       [true, "dark"],
       [false, "light"],
@@ -36,26 +36,31 @@ const Header = () => {
         <div className="social-networks">
           <CustomLink href="github.com/Edilberto-Vazquez">
             <Icon
-              content={
-                theme === "dark"
-                  ? "/assets/icons/github-dark.svg"
-                  : "/assets/icons/github-light.svg"
-              }
-              alt="github"
+              image={{
+                src:
+                  theme === "dark"
+                    ? "/assets/icons/github-dark.svg"
+                    : "/assets/icons/github-light.svg",
+                alt: "github",
+              }}
             />
           </CustomLink>
           <CustomLink href="github.com/Edilberto-Vazquez">
-            <Icon content="/assets/icons/linkedin.svg" alt="linkedin" />
+            <Icon
+              image={{ src: "/assets/icons/linkedin.svg", alt: "linkedin" }}
+            />
           </CustomLink>
           <CustomLink href="github.com/Edilberto-Vazquez">
-            <Icon content="/assets/icons/twitter.svg" alt="twitter" />
+            <Icon
+              image={{ src: "/assets/icons/twitter.svg", alt: "twitter" }}
+            />
           </CustomLink>
         </div>
         <div className="color-mode">
           <ToggleSwitch
             onChange={handleTheme}
             checked={theme === "dark"}
-            id={"color-mode"}
+            id="color-mode"
           />
           <span className="color-mode__text">Dark mode</span>
         </div>

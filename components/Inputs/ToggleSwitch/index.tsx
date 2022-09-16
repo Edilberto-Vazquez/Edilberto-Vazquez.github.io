@@ -1,6 +1,16 @@
 import React from "react"
 
-const ToggleSwitch = ({ onChange, checked = false, id = "" }) => {
+type ToggleSwitchProps = {
+  checked: boolean
+  id: string
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+const ToggleSwitch = ({
+  onChange,
+  checked,
+  id,
+}: ToggleSwitchProps): JSX.Element => {
   return (
     <label className="toggle-switch" htmlFor={id}>
       <input
