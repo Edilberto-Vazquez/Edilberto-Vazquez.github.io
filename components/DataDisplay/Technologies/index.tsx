@@ -11,7 +11,7 @@ const Technologies = ({ technologies }: TechnologiesProps) => {
       {technologies.map(
         (technology: string): JSX.Element => (
           <li key={technology} className="technologies__item">
-            <Icon icon={technology} width="18px" height="18px" />
+            <Icon icon={technology} width="18" height="18" />
             {technology}
           </li>
         )
