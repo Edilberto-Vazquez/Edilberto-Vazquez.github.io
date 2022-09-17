@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "next/image"
+import Image from "next/future/image"
 
 const ICONS = new Map<string, string>([
   ["css", "/assets/icons/technologies/css.svg"],
@@ -47,21 +47,20 @@ type IconProps = {
 } & typeof defaultProps
 
 const defaultProps = {
-  width: "38px",
-  height: "38px",
+  width: "38",
+  height: "38",
 }
 
 const Icon = ({
   icon,
-  width = "38px",
-  height = "38px",
+  width = "38",
+  height = "38",
 }: IconProps): JSX.Element => {
   return (
     <Image
       src={ICONS.get(icon.toLowerCase())}
       width={width}
       height={height}
-      objectFit="contain"
       alt={icon}
     />
   )
