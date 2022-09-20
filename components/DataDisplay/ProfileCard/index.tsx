@@ -4,14 +4,14 @@ import Technologies from "../Technologies"
 type ProfileCardProps = {
   image: string
   name: string
-  descirption: string
+  description: string
   technologies: string[]
 }
 
 const ProfileCard = ({
   image,
   name,
-  descirption,
+  description,
   technologies,
 }: ProfileCardProps): JSX.Element => {
   return (
@@ -21,7 +21,7 @@ const ProfileCard = ({
         <h3 className="card-header__name">{name}</h3>
       </div>
       <div className="card-description">
-        <p className="card-description__description">{descirption}</p>
+        <p className="card-description__description">{description}</p>
       </div>
       <Technologies technologies={technologies} />
     </div>
