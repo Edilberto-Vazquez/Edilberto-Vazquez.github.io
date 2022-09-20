@@ -1,19 +1,17 @@
-import React from "react"
-import PageContent from "../i18n/pagecontent.json"
+import React, { useEffect } from "react"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
 import ProjectList from "../components/DataDisplay/ProjectList"
+import { useLanguageContext } from "../context/useContext"
 import { useGqlQuery } from "../graphql/useFetchQuery"
 import { indexPageQuery } from "../graphql/queries"
-
-const variables = { lang: "es-MX" }
+import { indexPage } from "../i18n/pagecontent.json"
 
 export default function Home(): JSX.Element {
-  const { profile } = PageContent
-
+  const { language } = useLanguageContext()
   const { loading, error, data } = useGqlQuery({
     query: indexPageQuery,
-    variables,
+    variables: language,
   })
 
   if (loading) {
@@ -36,7 +34,9 @@ export default function Home(): JSX.Element {
           />
         </section>
         <section className="projects-section">
-          <h3 className="projects-section__title">Projects</h3>
+          <h3 className="projects-section__title">
+            {indexPage[language.lang].projects}
+          </h3>
           <ProjectList projects={data.projects} />
         </section>
       </div>

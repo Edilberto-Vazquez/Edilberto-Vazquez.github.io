@@ -3,15 +3,16 @@ import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
 import JobCard from "../components/DataDisplay/JobCard"
 import { Job } from "../types/types"
+import { useLanguageContext } from "../context/useContext"
 import { useGqlQuery } from "../graphql/useFetchQuery"
 import { aboutPageQuery } from "../graphql/queries"
-
-const variables = { lang: "es-MX" }
+import { aboutPage } from "../i18n/pagecontent.json"
 
 export default function About(): JSX.Element {
+  const { language } = useLanguageContext()
   const { loading, error, data } = useGqlQuery({
     query: aboutPageQuery,
-    variables,
+    variables: language,
   })
 
   if (loading) {
@@ -34,11 +35,15 @@ export default function About(): JSX.Element {
           />
         </section>
         <section className="resume-section">
-          <h3 className="resume-section__title">Resume</h3>
+          <h3 className="resume-section__title">
+            {aboutPage[language.lang].resume}
+          </h3>
           <p className="resume-section__history">{data.resume}</p>
         </section>
         <section className="jobs-section">
-          <h3 className="jobs-section__title">Previous jobs</h3>
+          <h3 className="jobs-section__title">
+            {aboutPage[language.lang].previousJobs}
+          </h3>
           <ul className="previous-jobs">
             {data.jobs.map(
               (

@@ -47,8 +47,6 @@ const useGqlQuery = ({
         console.log(parseResponse.errors[0].message)
         setError(true)
       }
-      console.log(parseResponse)
-
       setData(parseResponse.data[query.name])
     } catch (error: any) {
       console.log(error)

@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react"
 import Icon from "../../CustomIcon"
-import ToggleSwitch from "../../Inputs/ToggleSwitch"
 import CustomLink from "../CustomLink"
+import ToggleSwitch from "../../Inputs/ToggleSwitch"
+import LanguageSelector from "../../Inputs/LanguageSelector"
+import { useLanguageContext } from "../../../context/useContext"
+import { header } from "../../../i18n/pagecontent.json"
 
 const Header = (): JSX.Element => {
+  const { language, setLanguage } = useLanguageContext()
   const [theme, setTheme] = useState<string>("dark")
 
   const handleTheme = (e: { target: { checked: boolean } }): void => {
@@ -30,17 +34,17 @@ const Header = (): JSX.Element => {
       <input className="header__nav-icon-mobile" type="checkbox" />
       <nav className="nav">
         <div className="pages">
-          <CustomLink href="/">Projects</CustomLink>
-          <CustomLink href="/about">About</CustomLink>
+          <CustomLink href="/">{header[language.lang].projects}</CustomLink>
+          <CustomLink href="/about">{header[language.lang].about}</CustomLink>
         </div>
         <div className="social-networks">
-          <CustomLink href="github.com/Edilberto-Vazquez">
+          <CustomLink href="https://www.github.com/Edilberto-Vazquez">
             <Icon icon="github" />
           </CustomLink>
-          <CustomLink href="github.com/Edilberto-Vazquez">
+          <CustomLink href="https://www.linkedin.com/in/edilberto-vazquez-luna-7a038621b/">
             <Icon icon="linkedin" />
           </CustomLink>
-          <CustomLink href="github.com/Edilberto-Vazquez">
+          <CustomLink href="">
             <Icon icon="tiwtter" />
           </CustomLink>
         </div>
@@ -50,7 +54,19 @@ const Header = (): JSX.Element => {
             checked={theme === "dark"}
             id="color-mode"
           />
-          <span className="color-mode__text">Dark mode</span>
+          <span className="color-mode__text">
+            {header[language.lang].theme}
+          </span>
+        </div>
+        <div className="language">
+          <LanguageSelector
+            languages={header[language.lang].languages}
+            value={language.lang}
+            onChange={(e) => setLanguage({ lang: e.target.value })}
+          />
+          <span className="language__text">
+            {header[language.lang].language}
+          </span>
         </div>
       </nav>
     </header>

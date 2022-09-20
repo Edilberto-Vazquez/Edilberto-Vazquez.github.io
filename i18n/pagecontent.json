@@ -1,63 +1,42 @@
 {
-  "profile": {
-    "image": "https://s.gravatar.com/avatar/1bf51742e09fee803505b9c0a845e262?s=80",
-    "name": "Edilberto Vazquez Luna",
-    "descirption": "Hello, Welcome to my Website where you can see my projects and otherthings. I am currently working as a JavaScript developer but I work with other languages such like Go",
-    "technologies": [
-      "JavaScript",
-      "TypeScript",
-      "NextJS",
-      "CSS",
-      "SASS",
-      "Graphql",
-      "NodeJS",
-      "Golang",
-      "Docker",
-      "Git",
-      "Sequelize",
-      "MongoDB",
-      "SQL"
-    ],
-    "projects": [
-      {
-        "name": "Edilberto-Vazquez/website-ui",
-        "description": "My website for show my projects",
-        "repository": "https://github.com/Edilberto-Vazquez/website-ui",
-        "technologies": ["JavaScript", "TypeScript", "NextJS", "React", "SASS"],
-        "liveDemo": ""
-      }
-    ],
-    "jobs": [
-      {
-        "position": "Front-end",
-        "company": "Full Stack",
-        "location": "Puebla, Mexico",
-        "description": "Professional internship contract as Front-End developer in FullStack. Work done, migration of the ferreyarns website from Worpress to ReactJS, development of the Vetech site for the management of pet consultations for veterinarians.",
-        "dates": {
-          "from": "2021-05",
-          "to": "2021-09"
-        }
-      },
-      {
-        "position": "Front-end",
-        "company": "Kannbal",
-        "location": "Mexico City, Mexico",
-        "description": "Front-End developer in kannbal conuslting. Development of web solutions for LMS like Edmodo, Moodle etc, using HTML, CSS, JavaScript, and Web Development with ReactJS.",
-        "dates": {
-          "from": "2022-01",
-          "to": "2022-02"
-        }
-      },
-      {
-        "position": "Full-Stack",
-        "company": "BluePixel",
-        "location": "Mexico City, Mexico",
-        "description": "Front-end development with NextJS, Graphql and ApolloClient and Material-UI and Back-end devlopment with NodeJS, ApolloServer, Python, MongoDB, MySQL, Docker.",
-        "dates": {
-          "from": "2022-03",
-          "to": "present"
-        }
-      }
-    ]
+  "header": {
+    "es-MX": {
+      "projects": "Proyectos",
+      "about": "Sobre mí",
+      "theme": "Modo oscuro",
+      "language": "Idioma",
+      "languages": [
+        { "type": "es-MX", "value": "Español" },
+        { "type": "en-US", "value": "Ingles" }
+      ]
+    },
+    "en-US": {
+      "projects": "Projects",
+      "about": "About",
+      "theme": "Dark mode",
+      "language": "language",
+      "languages": [
+        { "type": "es-MX", "value": "Spanish" },
+        { "type": "en-US", "value": "English" }
+      ]
+    }
+  },
+  "indexPage": {
+    "es-MX": {
+      "projects": "Proyectos"
+    },
+    "en-US": {
+      "projects": "Projects"
+    }
+  },
+  "aboutPage": {
+    "es-MX": {
+      "resume": "Biografía",
+      "previousJobs": "Trabajos anteriores"
+    },
+    "en-US": {
+      "resume": "Biography",
+      "previousJobs": "Previous jobs"
+    }
   }
 }

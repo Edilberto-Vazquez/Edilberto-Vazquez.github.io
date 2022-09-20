@@ -49,9 +49,10 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: 100px 100px min-content;
+    grid-template-rows: 100px 100px min-content min-content;
     justify-self: center;
     place-items: center;
+    row-gap: 8px;
     position: absolute;
     top: 64px;
     left: 0;
@@ -73,7 +74,20 @@
       place-items: center;
     }
     .color-mode {
-      width: 70px;
+      width: 80px;
+      height: 100%;
+      display: grid;
+      grid-auto-rows: min-content;
+      place-content: center;
+      place-items: center;
+      row-gap: 2px;
+      &__text {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+    }
+    .language {
+      width: 80px;
       height: 100%;
       display: grid;
       grid-auto-rows: min-content;
@@ -93,10 +107,10 @@
       display: none;
     }
     .nav {
-      width: 450px;
+      width: 540px;
       height: 64px;
       grid-template-rows: 100%;
-      grid-template-columns: 200px 180px 70px;
+      grid-template-columns: 200px 180px 80px 80px;
       position: relative;
       top: 0;
       background-color: transparent;
