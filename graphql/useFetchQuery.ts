@@ -12,17 +12,6 @@ type useFetchQueryProps = {
   variables: any
 }
 
-const gqlQuery = (body: {
-  query: string
-  variables: any
-}): Promise<{ data: any; errors: any }> => {
-  return fetch("http://localhost:8000/query", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  }).then((res) => res.json())
-}
-
 const useGqlQuery = ({
   query,
   variables,
@@ -34,7 +23,7 @@ const useGqlQuery = ({
   const handleQuery = async (values: useFetchQueryProps) => {
     setLoading(true)
     try {
-      const response: Response = await fetch("http://localhost:8000/query", {
+      const response: Response = await fetch(`${process.env.API_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -63,4 +52,4 @@ const useGqlQuery = ({
   return { loading, error, data }
 }
 
-export { useGqlQuery, gqlQuery }
+export { useGqlQuery }
