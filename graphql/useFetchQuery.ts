@@ -22,8 +22,6 @@ const useGqlQuery = ({
 
   const handleQuery = async (values: useFetchQueryProps) => {
     setLoading(true)
-    console.log(process.env.NEXT_PUBLIC_API_URL)
-
     try {
       const response: Response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
         method: "POST",
