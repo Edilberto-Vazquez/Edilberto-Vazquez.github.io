@@ -2,7 +2,7 @@ import React from "react"
 import PageContent from "../i18n/pagecontent.json"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
-import ProjectList from "../components/DataDisplay/ProjectsList"
+import ProjectList from "../components/DataDisplay/ProjectList"
 import { useGqlQuery } from "../graphql/useFetchQuery"
 import { indexPageQuery } from "../graphql/queries"
 

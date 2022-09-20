@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
-import ProfileJobs from "../components/DataDisplay/ProfileJobs"
+import JobCard from "../components/DataDisplay/JobCard"
 import { Job } from "../types/types"
 import { useGqlQuery } from "../graphql/useFetchQuery"
 import { aboutPageQuery } from "../graphql/queries"
@@ -46,7 +46,7 @@ export default function About(): JSX.Element {
                 index: number
               ): JSX.Element => (
                 <li className="previous-jobs__item" key={index}>
-                  <ProfileJobs
+                  <JobCard
                     position={position}
                     company={company}
                     location={location}

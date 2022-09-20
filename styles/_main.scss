@@ -11,10 +11,11 @@
 @import "../components/Layout/layout";
 
 @import "../components/DataDisplay/ProfileCard/profile-card";
-@import "../components/DataDisplay/ProjectsList/project-list";
 @import "../components/DataDisplay/ProjectCard/project-card";
+@import "../components/DataDisplay/ProjectList/project-list";
 @import "../components/DataDisplay/Technologies/technologies";
-@import "../components/DataDisplay/ProfileJobs/sass";
+@import "../components/DataDisplay/JobCard/job-card";
+@import "../components/DataDisplay/JobList/job-list";
 
 // ---Pages---
 @import "./main-page";

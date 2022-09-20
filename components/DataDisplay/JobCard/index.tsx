@@ -1,13 +1,7 @@
 import React from "react"
 import { Job } from "../../../types/types"
 
-const ProfileJobs = ({
-  position,
-  company,
-  location,
-  description,
-  dates,
-}: Job) => {
+const JobCard = ({ position, company, location, description, dates }: Job) => {
   return (
     <div className="job-card">
       <h3 className="job-card__header">
@@ -20,4 +14,4 @@ const ProfileJobs = ({
   )
 }
 
-export default ProfileJobs
+export default JobCard
