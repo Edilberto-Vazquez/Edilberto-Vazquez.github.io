@@ -49,7 +49,7 @@
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-rows: 100px 100px min-content min-content;
+    grid-template-rows: 100px 100px min-content;
     justify-self: center;
     place-items: center;
     row-gap: 8px;
@@ -67,35 +67,40 @@
       place-items: center;
     }
     .social-networks {
-      width: 180px;
+      width: 120px;
       height: auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       place-items: center;
     }
-    .color-mode {
-      width: 80px;
-      height: 100%;
+    .header-options {
       display: grid;
-      grid-auto-rows: min-content;
-      place-content: center;
+      grid-template-columns: min-content 80px;
       place-items: center;
-      row-gap: 2px;
-      &__text {
-        text-align: center;
-        font-size: 1.2rem;
+      .color-mode {
+        width: 80px;
+        height: 100%;
+        display: grid;
+        grid-auto-rows: min-content;
+        place-content: center;
+        place-items: center;
+        row-gap: 2px;
+        &__text {
+          text-align: center;
+          font-size: 1.2rem;
+        }
       }
-    }
-    .language {
-      width: 80px;
-      height: 100%;
-      display: grid;
-      grid-auto-rows: min-content;
-      place-content: center;
-      place-items: center;
-      row-gap: 2px;
-      &__text {
-        font-size: 1.2rem;
+      .language {
+        width: 80px;
+        height: 100%;
+        display: grid;
+        grid-auto-rows: min-content;
+        place-content: center;
+        place-items: center;
+        row-gap: 2px;
+        &__text {
+          font-size: 1.2rem;
+        }
       }
     }
   }
@@ -107,10 +112,10 @@
       display: none;
     }
     .nav {
-      width: 540px;
+      width: 500px;
       height: 64px;
       grid-template-rows: 100%;
-      grid-template-columns: 200px 180px 80px 80px;
+      grid-template-columns: 200px 120px 180px;
       position: relative;
       top: 0;
       background-color: transparent;

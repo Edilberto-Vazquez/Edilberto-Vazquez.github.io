@@ -39,34 +39,36 @@ const Header = (): JSX.Element => {
         </div>
         <div className="social-networks">
           <CustomLink href="https://www.github.com/Edilberto-Vazquez">
-            <Icon icon="github" />
+            <Icon icon="github" width="32" height="32" />
           </CustomLink>
           <CustomLink href="https://www.linkedin.com/in/edilberto-vazquez-luna-7a038621b/">
-            <Icon icon="linkedin" />
+            <Icon icon="linkedin" width="32" height="32" />
           </CustomLink>
-          <CustomLink href="">
+          {/* <CustomLink href="">
             <Icon icon="tiwtter" />
-          </CustomLink>
+          </CustomLink> */}
         </div>
-        <div className="color-mode">
-          <ToggleSwitch
-            onChange={handleTheme}
-            checked={theme === "dark"}
-            id="color-mode"
-          />
-          <span className="color-mode__text">
-            {header[language.lang].theme}
-          </span>
-        </div>
-        <div className="language">
-          <LanguageSelector
-            languages={languageSelector[language.lang]}
-            value={language.lang}
-            onChange={(e) => setLanguage({ lang: e.target.value })}
-          />
-          <span className="language__text">
-            {header[language.lang].language}
-          </span>
+        <div className="header-options">
+          <div className="color-mode">
+            <ToggleSwitch
+              onChange={handleTheme}
+              checked={theme === "dark"}
+              id="color-mode"
+            />
+            <span className="color-mode__text">
+              {header[language.lang].theme}
+            </span>
+          </div>
+          <div className="language">
+            <LanguageSelector
+              languages={languageSelector[language.lang]}
+              value={language.lang}
+              onChange={(e) => setLanguage({ lang: e.target.value })}
+            />
+            <span className="language__text">
+              {header[language.lang].language}
+            </span>
+          </div>
         </div>
       </nav>
     </header>

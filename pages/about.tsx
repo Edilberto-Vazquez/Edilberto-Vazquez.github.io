@@ -6,7 +6,11 @@ import { Job } from "../types/types"
 import { useLanguageContext } from "../context/useContext"
 import { useGqlQuery } from "../graphql/useFetchQuery"
 import { aboutPageQuery } from "../graphql/queries"
-import { aboutPage } from "../i18n/pagecontent.json"
+import {
+  aboutPage,
+  languageSelector,
+  downloadCV,
+} from "../i18n/pagecontent.json"
 
 export default function About(): JSX.Element {
   const { language } = useLanguageContext()
@@ -30,6 +34,10 @@ export default function About(): JSX.Element {
           <ProfileCard
             image={data.image}
             name={data.name}
+            language={{
+              languages: languageSelector[language.lang],
+              value: downloadCV[language.lang],
+            }}
             description={data.description}
             technologies={data.technologies}
           />
