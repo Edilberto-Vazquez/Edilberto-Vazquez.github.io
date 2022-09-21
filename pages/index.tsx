@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
 import ProjectList from "../components/DataDisplay/ProjectList"
+import Loading from "../components/Animations/Loading"
 import { useLanguageContext } from "../context/useContext"
 import { useGqlQuery } from "../graphql/useFetchQuery"
 import { indexPageQuery } from "../graphql/queries"
@@ -10,6 +11,7 @@ import {
   languageSelector,
   downloadCV,
 } from "../i18n/pagecontent.json"
+import Error from "../components/Animations/Error"
 
 export default function Home(): JSX.Element {
   const { language } = useLanguageContext()
@@ -19,11 +21,11 @@ export default function Home(): JSX.Element {
   })
 
   if (loading) {
-    return <span>Loading...</span>
+    return <Loading />
   }
 
   if (error) {
-    return <span>Something wrong</span>
+    return <Error />
   }
 
   return (

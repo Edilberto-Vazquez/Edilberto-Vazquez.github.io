@@ -18,6 +18,9 @@
 @import "../components/DataDisplay/JobCard/job-card";
 @import "../components/DataDisplay/JobList/job-list";
 
+@import "../components/Animations/Loading/loading";
+@import "../components/Animations/Error/error";
+
 // ---Pages---
 @import "./main-page";
 @import "./about-page";
