@@ -47,7 +47,7 @@ const ProfileCard = ({
           href={`${process.env.NEXT_PUBLIC_API_URL}/${lang.get(downLoadLang)}`}
           download={lang.get(downLoadLang)}
         >
-          {language.value}
+          <span>{language.value}</span>
         </a>
       </div>
       <div className="card-description">
