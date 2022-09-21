@@ -23,14 +23,17 @@ const useGqlQuery = ({
   const handleQuery = async (values: useFetchQueryProps) => {
     setLoading(true)
     try {
-      const response: Response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          query: values.query.value,
-          variables: values.variables,
-        }),
-      })
+      const response: Response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/query`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            query: values.query.value,
+            variables: values.variables,
+          }),
+        }
+      )
       const parseResponse = await response.json()
       if (parseResponse.errors) {
         console.log(parseResponse.errors[0].message)

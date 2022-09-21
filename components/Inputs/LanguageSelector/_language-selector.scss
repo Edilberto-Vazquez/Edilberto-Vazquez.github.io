@@ -1,9 +1,24 @@
 .language-selector {
-  width: 48px;
+  width: 100%;
   height: 24px;
   cursor: pointer;
   border-radius: 8px;
-  border: 10px solid var(#fff);
+  border: none;
   background-color: var(--color-primary);
   color: var(--text-primary);
+}
+
+[color-mode="light"] {
+  .language-selector {
+    border: 1px solid #8b949e;
+    background-color: #fff;
+    color: var(--text-primary);
+  }
+}
+
+[color-mode="dark"] {
+  .language-selector {
+    background-color: #1f6feb;
+    color: var(--text-primary);
+  }
 }

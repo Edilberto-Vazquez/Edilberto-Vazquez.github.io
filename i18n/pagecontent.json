@@ -4,11 +4,7 @@
       "projects": "Proyectos",
       "about": "Sobre mí",
       "theme": "Modo oscuro",
-      "language": "Idioma",
-      "languages": [
-        { "type": "es-MX", "value": "Español" },
-        { "type": "en-US", "value": "Ingles" }
-      ]
+      "language": "Idioma"
     },
     "en-US": {
       "projects": "Projects",
@@ -38,5 +34,19 @@
       "resume": "Biography",
       "previousJobs": "Previous jobs"
     }
+  },
+  "languageSelector": {
+    "es-MX": [
+      { "type": "es-MX", "value": "Español" },
+      { "type": "en-US", "value": "Ingles" }
+    ],
+    "en-US": [
+      { "type": "es-MX", "value": "Spanish" },
+      { "type": "en-US", "value": "English" }
+    ]
+  },
+  "downloadCV": {
+    "es-MX": "Descargar CV",
+    "en-US": "Download CV"
   }
 }

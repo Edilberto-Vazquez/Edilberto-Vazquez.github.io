@@ -4,7 +4,7 @@ import CustomLink from "../CustomLink"
 import ToggleSwitch from "../../Inputs/ToggleSwitch"
 import LanguageSelector from "../../Inputs/LanguageSelector"
 import { useLanguageContext } from "../../../context/useContext"
-import { header } from "../../../i18n/pagecontent.json"
+import { header, languageSelector } from "../../../i18n/pagecontent.json"
 
 const Header = (): JSX.Element => {
   const { language, setLanguage } = useLanguageContext()
@@ -60,7 +60,7 @@ const Header = (): JSX.Element => {
         </div>
         <div className="language">
           <LanguageSelector
-            languages={header[language.lang].languages}
+            languages={languageSelector[language.lang]}
             value={language.lang}
             onChange={(e) => setLanguage({ lang: e.target.value })}
           />
