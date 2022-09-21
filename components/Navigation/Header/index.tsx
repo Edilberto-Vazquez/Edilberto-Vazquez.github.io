@@ -7,7 +7,7 @@ import { useLanguageContext } from "../../../context/useContext"
 import { header, languageSelector } from "../../../i18n/pagecontent.json"
 
 const Header = (): JSX.Element => {
-  const { language, setLanguage } = useLanguageContext()
+  const { language, handleLanguage } = useLanguageContext()
   const [theme, setTheme] = useState<string>("dark")
 
   const handleTheme = (e: { target: { checked: boolean } }): void => {
@@ -63,7 +63,7 @@ const Header = (): JSX.Element => {
             <LanguageSelector
               languages={languageSelector[language.lang]}
               value={language.lang}
-              onChange={(e) => setLanguage({ lang: e.target.value })}
+              onChange={(e) => handleLanguage(e.target.value)}
             />
             <span className="language__text">
               {header[language.lang].language}

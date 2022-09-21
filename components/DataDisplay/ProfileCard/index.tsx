@@ -22,10 +22,10 @@ const ProfileCard = ({
   description,
   technologies,
 }: ProfileCardProps): JSX.Element => {
-  const [downLoadLang, setDownLoadLang] = useState<string>("es-MX")
+  const [downLoadLang, setDownLoadLang] = useState<string>("un-US")
   const lang = new Map<string, string>([
-    ["es-MX", `resume-cv-es`],
     ["en-US", `resume-cv-en`],
+    ["es-MX", `resume-cv-es`],
   ])
 
   return (

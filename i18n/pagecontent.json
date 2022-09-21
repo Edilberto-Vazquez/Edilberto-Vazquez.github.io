@@ -10,11 +10,7 @@
       "projects": "Projects",
       "about": "About",
       "theme": "Dark mode",
-      "language": "language",
-      "languages": [
-        { "type": "es-MX", "value": "Spanish" },
-        { "type": "en-US", "value": "English" }
-      ]
+      "language": "language"
     }
   },
   "indexPage": {
@@ -37,12 +33,12 @@
   },
   "languageSelector": {
     "es-MX": [
-      { "type": "es-MX", "value": "Español" },
-      { "type": "en-US", "value": "Ingles" }
+      { "type": "en-US", "value": "Ingles" },
+      { "type": "es-MX", "value": "Español" }
     ],
     "en-US": [
-      { "type": "es-MX", "value": "Spanish" },
-      { "type": "en-US", "value": "English" }
+      { "type": "en-US", "value": "English" },
+      { "type": "es-MX", "value": "Spanish" }
     ]
   },
   "downloadCV": {
