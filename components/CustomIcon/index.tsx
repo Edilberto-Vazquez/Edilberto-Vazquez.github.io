@@ -2,6 +2,7 @@ import React from "react"
 import Image from "next/future/image"
 
 const ICONS = new Map<string, string>([
+  ["html", "/assets/icons/technologies/html.svg"],
   ["css", "/assets/icons/technologies/css.svg"],
   ["sass", "/assets/icons/technologies/sass.svg"],
   ["javascript", "/assets/icons/technologies/javascript.svg"],

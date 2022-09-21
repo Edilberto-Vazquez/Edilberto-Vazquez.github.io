@@ -14,6 +14,7 @@ const ProjectList = ({ projects }: ProjectListProps): JSX.Element => {
           name,
           description,
           repository,
+          website,
           technologies,
         }: Project): JSX.Element => (
           <li key={name} className="project-list__item">
@@ -21,6 +22,7 @@ const ProjectList = ({ projects }: ProjectListProps): JSX.Element => {
               name={name}
               description={description}
               repository={repository}
+              website={website}
               technologies={technologies}
             />
           </li>

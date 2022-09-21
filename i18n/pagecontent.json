@@ -48,5 +48,13 @@
   "downloadCV": {
     "es-MX": "Descargar CV",
     "en-US": "Download CV"
+  },
+  "projectCard": {
+    "es-MX": {
+      "repository": "Link al repositorio"
+    },
+    "en-US": {
+      "repository": "link to repository"
+    }
   }
 }

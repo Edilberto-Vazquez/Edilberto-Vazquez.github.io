@@ -3,13 +3,16 @@
   height: auto;
   display: grid;
   grid-auto-rows: min-content;
+  place-items: center;
   gap: 16px;
   .card-header {
+    max-width: 400px;
     width: 100%;
     min-height: 58px;
     display: grid;
     grid-template-columns: 30% 70%;
     place-items: center;
+    gap: 16px;
     &__image {
       width: 100%;
       max-width: 120px;

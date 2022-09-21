@@ -11,6 +11,7 @@ export interface Project {
   name: string
   description: string
   repository: string
+  website: string
   technologies: string[]
 }
 

@@ -65,7 +65,7 @@ export const indexPageQuery: {
           description
           repository
           technologies
-          Website
+          website
         }
       }
     }

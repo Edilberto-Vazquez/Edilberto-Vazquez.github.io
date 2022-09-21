@@ -7,8 +7,16 @@
   gap: 12px;
   background-color: var(--color-secondary);
   @include card-style;
-  &__repository {
+  &__link_website {
     font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--text-primary);
+  }
+  &__link_website:hover {
+    color: var(--text-hover);
+  }
+  &__repository {
+    font-size: 1.4rem;
     text-decoration: none;
     color: var(--text-primary);
   }
