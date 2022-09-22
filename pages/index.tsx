@@ -1,5 +1,4 @@
-import React, { useEffect } from "react"
-import Head from "next/head"
+import React from "react"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
 import ProjectList from "../components/DataDisplay/ProjectList"
