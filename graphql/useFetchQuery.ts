@@ -30,7 +30,7 @@ const useGqlQuery = ({
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             query: values.query.value,
-            variables: values.variables,
+            variables: values.variables ? values.variables : { lang: "en-US" },
           }),
         }
       )
