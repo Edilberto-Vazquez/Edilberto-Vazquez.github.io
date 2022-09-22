@@ -10,7 +10,6 @@ import {
   indexPage,
   languageSelector,
   downloadCV,
-  profileCard,
 } from "../i18n/pagecontent.json"
 import Error from "../components/Animations/Error"
 
@@ -50,7 +49,7 @@ export default function Home(): JSX.Element {
               value: downloadCV[language.lang],
             }}
             description={data.description}
-            platziLink={profileCard[language.lang].platziLink}
+            // platziLink={profileCard[language.lang].platziLink}
             technologies={data.technologies}
           />
         </section>
