@@ -8,11 +8,18 @@ type LanguageSelectorProps = {
   value: string
 }
 
+type PlatziLink = {
+  phrase1: string
+  linkPhrase: string
+  phrase2: string
+}
+
 type ProfileCardProps = {
   image: string
   name: string
   language: LanguageSelectorProps
   description: string
+  platziLink: PlatziLink
   technologies: string[]
 }
 
@@ -21,6 +28,7 @@ const ProfileCard = ({
   name,
   language,
   description,
+  platziLink,
   technologies,
 }: ProfileCardProps): JSX.Element => {
   const [downLoadLang, setDownLoadLang] = useState<string>("en-US")
@@ -54,7 +62,7 @@ const ProfileCard = ({
       <div className="card-description">
         <p className="card-description__description">{description}</p>
       </div>
-      {/* <div className="platzi">
+      <div className="platzi">
         <p className="platzi__link">
           {platziLink.phrase1}{" "}
           <Link href="https://platzi.com/p/Edi-Vazquez/">
@@ -62,7 +70,7 @@ const ProfileCard = ({
           </Link>{" "}
           {platziLink.phrase2}
         </p>
-      </div> */}
+      </div>
       <Technologies technologies={technologies} />
     </div>
   )
