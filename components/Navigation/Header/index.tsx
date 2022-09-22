@@ -24,7 +24,7 @@ const Header = (): JSX.Element => {
   }
 
   const handleLanguage = (lang: string) => {
-    setLanguage({ lang })
+    setLanguage({ lang: lang })
     window.localStorage.setItem("language", lang)
   }
 

@@ -28,7 +28,6 @@ const useGqlQuery = ({
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          cache: "force-cache",
           body: JSON.stringify({
             query: query.value,
             variables: variables,
@@ -50,7 +49,6 @@ const useGqlQuery = ({
   }
 
   useEffect(() => {
-    if (loading || error) return
     handleQuery({ query, variables })
     return
   }, [query, variables])

@@ -16,7 +16,6 @@ import Error from "../components/Animations/Error"
 
 export default function Home(): JSX.Element {
   const { language } = useLanguageContext()
-  console.log(language)
   const { loading, error, data } = useGqlQuery({
     query: indexPageQuery,
     variables: language,

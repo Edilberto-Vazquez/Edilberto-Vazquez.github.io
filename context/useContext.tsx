@@ -18,19 +18,36 @@ const LanguageContext = createContext<LanguageState>({
   setLanguage: (lang: React.SetStateAction<Lang>) => lang,
 })
 
+// const getLanguage = () => {
+//   if (typeof window !== "undefined") {
+//     const acceptedLang: string[] = ["en-US", "es-MX"]
+//     const lang: string = window.localStorage.getItem("language")
+//     console.log(acceptedLang.includes(lang))
+//     console.log(lang)
+//     if (acceptedLang.includes(lang)) {
+//       return lang
+//     } else {
+//       window.localStorage.setItem("language", "en-US")
+//       return "en-US"
+//     }
+//   } else {
+//     return "en-US"
+//   }
+// }
+
 export const LanguageWrapper = ({ children }: LanguageProps): JSX.Element => {
   const [language, setLanguage] = useState<Lang>({ lang: "en-US" })
 
   useEffect(() => {
-    console.log(typeof window !== "undefined")
     if (typeof window !== "undefined") {
       const acceptedLang: string[] = ["en-US", "es-MX"]
       const lang: string = window.localStorage.getItem("language")
       if (acceptedLang.includes(lang)) {
-        setLanguage({ lang })
+        setLanguage({ lang: lang })
+      } else {
+        window.localStorage.setItem("language", "en-US")
+        setLanguage({ lang: "en-US" })
       }
-      window.localStorage.setItem("language", "en-US")
-      setLanguage({ lang: "en-US" })
     } else {
       setLanguage({ lang: "en-US" })
     }
