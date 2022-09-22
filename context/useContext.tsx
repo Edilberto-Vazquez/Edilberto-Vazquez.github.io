@@ -30,6 +30,8 @@ export const LanguageWrapper = ({ children }: LanguageProps): JSX.Element => {
         setLanguage({ lang: "en-US" })
       }
       setLanguage({ lang })
+    } else {
+      setLanguage({ lang: "en-US" })
     }
   }, [])
 
