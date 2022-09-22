@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
   const { language } = useLanguageContext()
   const { loading, error, data } = useGqlQuery({
     query: indexPageQuery,
-    variables: language,
+    variables: language ? language : { lang: "en-US" },
   })
 
   if (loading) {
