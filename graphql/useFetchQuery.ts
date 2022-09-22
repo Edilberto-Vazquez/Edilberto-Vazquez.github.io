@@ -35,7 +35,7 @@ const useGqlQuery = ({
         }
       )
       const parseResponse = await response.json()
-      if (parseResponse.errors) {
+      if (parseResponse.errors?.lenght > 0) {
         console.log(parseResponse.errors[0].message)
         setError(true)
       }
