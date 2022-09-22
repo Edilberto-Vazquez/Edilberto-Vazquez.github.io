@@ -7,7 +7,7 @@ import { useLanguageContext } from "../../../context/useContext"
 import { header, languageSelector } from "../../../i18n/pagecontent.json"
 
 const Header = (): JSX.Element => {
-  const { language, handleLanguage } = useLanguageContext()
+  const { language, setLanguage } = useLanguageContext()
   const [theme, setTheme] = useState<string>("dark")
 
   const handleTheme = (e: { target: { checked: boolean } }): void => {
@@ -21,6 +21,11 @@ const Header = (): JSX.Element => {
     )
     window.localStorage.setItem("color-mode", themes.get(e.target.checked))
     setTheme(themes.get(e.target.checked))
+  }
+
+  const handleLanguage = (lang: string) => {
+    setLanguage({ lang })
+    window.localStorage.setItem("language", lang)
   }
 
   useEffect(() => {

@@ -6,7 +6,7 @@ type Lang = {
 
 type LanguageState = {
   language: Lang
-  handleLanguage: (lang: string) => void
+  setLanguage: React.Dispatch<React.SetStateAction<Lang>>
 }
 
 type LanguageProps = {
@@ -15,29 +15,26 @@ type LanguageProps = {
 
 const LanguageContext = createContext<LanguageState>({
   language: { lang: "en-US" },
-  handleLanguage: (lang: string) => {},
+  setLanguage: (lang: React.SetStateAction<Lang>) => lang,
 })
 
 export const LanguageWrapper = ({ children }: LanguageProps): JSX.Element => {
   const [language, setLanguage] = useState<Lang>({ lang: "en-US" })
 
-  const handleLanguage = (lang: string) => {
-    setLanguage({ lang })
-    window.localStorage.setItem("language", lang)
-  }
-
   useEffect(() => {
-    const acceptedLang: string[] = ["en-US", "es-MX"]
-    const lang: string = window.localStorage.getItem("language")
-    if (!acceptedLang.includes(lang)) {
-      window.localStorage.setItem("language", "en-US")
-      setLanguage({ lang: "en-US" })
+    if (typeof window !== "undefined") {
+      const acceptedLang: string[] = ["en-US", "es-MX"]
+      const lang: string = window.localStorage.getItem("language")
+      if (!acceptedLang.includes(lang)) {
+        window.localStorage.setItem("language", "en-US")
+        setLanguage({ lang: "en-US" })
+      }
+      setLanguage({ lang })
     }
-    setLanguage({ lang })
   }, [])
 
   return (
-    <LanguageContext.Provider value={{ language, handleLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   )
