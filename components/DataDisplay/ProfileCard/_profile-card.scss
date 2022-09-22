@@ -59,6 +59,15 @@
     width: 100%;
     font-size: 1.6rem;
   }
+  .platzi {
+    width: 100%;
+    &__link {
+      font-size: 1.4rem;
+      a {
+        color: #1f6feb;
+      }
+    }
+  }
   .card-technologies {
     width: 100%;
     height: auto;

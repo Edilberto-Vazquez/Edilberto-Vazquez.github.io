@@ -52,5 +52,21 @@
     "en-US": {
       "repository": "link to repository"
     }
+  },
+  "profileCard": {
+    "es-MX": {
+      "platziLink": {
+        "phrase1": "Puedes revisar mi",
+        "linkPhrase": "perfil de platzi",
+        "phrase2": "para ver los cursos que he tomado"
+      }
+    },
+    "en-US": {
+      "platziLink": {
+        "phrase1": "You can check my",
+        "linkPhrase": "platzi profile",
+        "phrase2": "to see the courses I have taken"
+      }
+    }
   }
 }

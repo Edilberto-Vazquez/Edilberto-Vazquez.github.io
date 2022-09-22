@@ -1,10 +1,18 @@
 import React, { useState } from "react"
+import Link from "next/link"
 import LanguageSelector from "../../Inputs/LanguageSelector"
 import Technologies from "../Technologies"
+import { profileCard } from "../../../i18n/pagecontent.json"
 
 type LanguageSelectorProps = {
   languages: []
   value: string
+}
+
+type PlatziLink = {
+  phrase1: string
+  linkPhrase: string
+  phrase2: string
 }
 
 type ProfileCardProps = {
@@ -12,6 +20,7 @@ type ProfileCardProps = {
   name: string
   language: LanguageSelectorProps
   description: string
+  platziLink: PlatziLink
   technologies: string[]
 }
 
@@ -20,6 +29,7 @@ const ProfileCard = ({
   name,
   language,
   description,
+  platziLink,
   technologies,
 }: ProfileCardProps): JSX.Element => {
   const [downLoadLang, setDownLoadLang] = useState<string>("en-US")
@@ -27,6 +37,8 @@ const ProfileCard = ({
     ["en-US", `resume-cv-en`],
     ["es-MX", `resume-cv-es`],
   ])
+
+  console.log(platziLink)
 
   return (
     <div className="card-profile">
@@ -52,6 +64,15 @@ const ProfileCard = ({
       </div>
       <div className="card-description">
         <p className="card-description__description">{description}</p>
+      </div>
+      <div className="platzi">
+        <p className="platzi__link">
+          {platziLink.phrase1}{" "}
+          <Link href="https://platzi.com/p/Edi-Vazquez/">
+            <a>{platziLink.linkPhrase}</a>
+          </Link>{" "}
+          {platziLink.phrase2}
+        </p>
       </div>
       <Technologies technologies={technologies} />
     </div>
