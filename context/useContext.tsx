@@ -14,7 +14,7 @@ type LanguageProps = {
 }
 
 const LanguageContext = createContext<LanguageState>({
-  language: { lang: "" },
+  language: { lang: "en-US" },
   handleLanguage: (lang: string) => {},
 })
 
