@@ -28,7 +28,7 @@ const useGqlQuery = ({
   const [error, setError] = useState<boolean>(false)
   const [data, setData] = useState<any>(query.response)
 
-  const handleQuery = async (values: useFetchQueryProps) => {
+  const handleQuery = async ({ query, variables }: useFetchQueryProps) => {
     try {
       setLoading(true)
       const response: Response = await fetch(
@@ -38,8 +38,8 @@ const useGqlQuery = ({
           headers: { "Content-Type": "application/json" },
           cache: "force-cache",
           body: JSON.stringify({
-            query: values.query.value,
-            variables: values ? values.variables : { lang: "en-US" },
+            query: query.value,
+            variables: variables ? variables : { lang: "en-US" },
           }),
         }
       )
