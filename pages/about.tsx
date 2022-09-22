@@ -18,7 +18,6 @@ export default function About(): JSX.Element {
   const { loading, error, data } = useGqlQuery({
     query: aboutPageQuery,
     variables: language,
-    defaultLanguage: { lang: "en-US" },
   })
 
   if (loading) {
