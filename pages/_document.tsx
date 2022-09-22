@@ -7,8 +7,19 @@ export default function Document() {
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="light dark" />
+        <meta name="apple-mobile-web-app-title" content="potatofy.dev" />
+        {/* <meta property="og:url" content="https://potatofy.dev/" /> */}
+        <meta property="og:type" content="website" />
+        <meta name="application-name" content="potatofy.dev" />
+        {/* <meta name="description" content="Edilberto Vazquez website" /> */}
+        <meta property="og:site_name" content="potatofy.dev" />
+        <meta property="og:locale" content="en_US" />
+        {/* <meta property="og:description" content="Edilberto Vazquez website" /> */}
+        <meta
+          property="og:title"
+          content="Frontend, JavaScript, TypeScript CSS, HTML, React, NextJS, Backend, Golang, Docker, MongoDB, SQL"
+        />
       </Head>
       <body>
         <script dangerouslySetInnerHTML={{ __html: themeInitializer }} />

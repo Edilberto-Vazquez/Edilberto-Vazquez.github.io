@@ -10,6 +10,7 @@ import {
   aboutPage,
   languageSelector,
   downloadCV,
+  profileCard,
 } from "../i18n/pagecontent.json"
 
 export default function About(): JSX.Element {
@@ -28,7 +29,15 @@ export default function About(): JSX.Element {
   }
 
   return (
-    <Layout>
+    <Layout
+      headMetaTags={{
+        title: "Edilberto Vazquez; About me | Sobre mí",
+        descriptionMeta: "About me | Sobre mí",
+        propertyUrl: "https://potatofy.dev/about",
+        propertyDescription:
+          "Frontend, JavaScript, TypeScript CSS, HTML, React, NextJS, Backend, Golang, Docker, MongoDB, SQL",
+      }}
+    >
       <div className="about-page">
         <section className="profile-section">
           <ProfileCard
@@ -39,6 +48,7 @@ export default function About(): JSX.Element {
               value: downloadCV[language.lang],
             }}
             description={data.description}
+            platziLink={profileCard[language.lang].platziLink}
             technologies={data.technologies}
           />
         </section>

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import Head from "next/head"
 import Layout from "../components/Layout"
 import ProfileCard from "../components/DataDisplay/ProfileCard"
 import ProjectList from "../components/DataDisplay/ProjectList"
@@ -30,7 +31,16 @@ export default function Home(): JSX.Element {
   }
 
   return (
-    <Layout>
+    <Layout
+      headMetaTags={{
+        title:
+          "Edilberto Vazquez; Software Developer | desarrollador de software ",
+        descriptionMeta: "Edilberto website",
+        propertyUrl: "https://potatofy.dev/",
+        propertyDescription:
+          "Frontend, JavaScript, TypeScript CSS, HTML, React, NextJS, Backend, Golang, Docker, MongoDB, SQL",
+      }}
+    >
       <div className="main-page">
         <section className="profile-section">
           <ProfileCard

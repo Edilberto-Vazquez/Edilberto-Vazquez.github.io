@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Link from "next/link"
 import LanguageSelector from "../../Inputs/LanguageSelector"
 import Technologies from "../Technologies"
-import { profileCard } from "../../../i18n/pagecontent.json"
 
 type LanguageSelectorProps = {
   languages: []
@@ -37,8 +36,6 @@ const ProfileCard = ({
     ["en-US", `resume-cv-en`],
     ["es-MX", `resume-cv-es`],
   ])
-
-  console.log(platziLink)
 
   return (
     <div className="card-profile">
