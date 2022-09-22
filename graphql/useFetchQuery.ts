@@ -7,9 +7,17 @@ type queryType = {
   response: any
 }
 
+type Language = {
+  lang: string
+}
+
 type useFetchQueryProps = {
   query: queryType
-  variables: any
+  variables: Language
+} & typeof defaultProps
+
+const defaultProps = {
+  variables: { lang: "en-US" },
 }
 
 const useGqlQuery = ({
@@ -21,16 +29,17 @@ const useGqlQuery = ({
   const [data, setData] = useState<any>(query.response)
 
   const handleQuery = async (values: useFetchQueryProps) => {
-    setLoading(true)
     try {
+      setLoading(true)
       const response: Response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/query`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
+          cache: "force-cache",
           body: JSON.stringify({
             query: values.query.value,
-            variables: values.variables ? values.variables : { lang: "en-US" },
+            variables: values ? values.variables : { lang: "en-US" },
           }),
         }
       )
@@ -49,10 +58,15 @@ const useGqlQuery = ({
   }
 
   useEffect(() => {
+    if (loading) return
+    if (error) return
     handleQuery({ query, variables })
+    return
   }, [query, variables])
 
   return { loading, error, data }
 }
+
+useGqlQuery.defaultProps = defaultProps
 
 export { useGqlQuery }
