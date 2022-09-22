@@ -22,14 +22,15 @@ export const LanguageWrapper = ({ children }: LanguageProps): JSX.Element => {
   const [language, setLanguage] = useState<Lang>({ lang: "en-US" })
 
   useEffect(() => {
+    console.log(typeof window !== "undefined")
     if (typeof window !== "undefined") {
       const acceptedLang: string[] = ["en-US", "es-MX"]
       const lang: string = window.localStorage.getItem("language")
-      if (!acceptedLang.includes(lang)) {
-        window.localStorage.setItem("language", "en-US")
-        setLanguage({ lang: "en-US" })
+      if (acceptedLang.includes(lang)) {
+        setLanguage({ lang })
       }
-      setLanguage({ lang })
+      window.localStorage.setItem("language", "en-US")
+      setLanguage({ lang: "en-US" })
     } else {
       setLanguage({ lang: "en-US" })
     }
